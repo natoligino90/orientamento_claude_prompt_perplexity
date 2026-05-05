@@ -289,7 +289,7 @@ section { padding: 72px 20px; }
 .facciamo { background: var(--cream); }
 .facciamo-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 48px 72px;
   margin-top: 44px;
   align-items: start;
