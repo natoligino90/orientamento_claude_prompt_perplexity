@@ -515,7 +515,7 @@ section { padding: 72px 20px; }
 footer {
   background: var(--brown);
   color: rgba(255,255,255,.55);
-  padding: 60px 20px 36px;
+  padding: 20px 20px 20px;
 }
 .footer-inner  { max-width: 1080px; margin: 0 auto; }
 .footer-top {
