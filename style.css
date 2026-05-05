@@ -119,7 +119,7 @@ nav {
 }
 .hero-logo-wrap { margin: 0 auto 32px; }
 .hero-logo-wrap img {
-  height: 60px;
+  height: 150px;
   width: auto;
   margin: 0 auto;
   filter: drop-shadow(0 2px 14px rgba(0,0,0,.50));
