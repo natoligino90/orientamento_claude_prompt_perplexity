@@ -236,7 +236,7 @@ section { padding: 72px 20px; }
   background: rgba(255,255,255,.05);
   border: 1px solid rgba(255,255,255,.09);
   border-radius: 10px;
-  padding: 30px 26px;
+  padding: 20px 26px;
 }
 .step-num {
   font-family: var(--serif);
