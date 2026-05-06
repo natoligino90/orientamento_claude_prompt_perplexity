@@ -352,7 +352,7 @@ footer { background: var(--brown); color: rgba(255,255,255,.55); padding: 20px 2
 }
 
   .hero {
-  min-height: 92vh;
+  min-height: 78vh;
 }
 
   .hero-bg {
