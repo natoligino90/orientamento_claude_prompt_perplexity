@@ -301,3 +301,4 @@ footer { background: var(--brown); color: rgba(255,255,255,.55); padding: 20px 2
 @media (max-width: 440px) {
   .non-grid  { grid-template-columns: 1fr; }
   .dest-grid { grid-template-columns: 1fr 1fr; }
+}
