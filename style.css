@@ -300,6 +300,11 @@ footer { background: var(--brown); color: rgba(255,255,255,.55); padding: 20px 2
    .hero-logo-wrap img { height: 120px; }
   .hero-inner { padding: 10px 20px 0px; }
   .hero h1 { font-size: clamp(1.8rem, 6vw, 2.6rem); }
+   .hero-bg {
+  background:
+    linear-gradient(155deg,rgba(30,19,10,.80) 0%,rgba(158,78,34,.42) 50%,rgba(30,19,10,.68) 100%),
+    url('images/hero-mobile.jpg') center / cover no-repeat;
+}
 }
 @media (max-width: 440px) {
   .non-grid  { grid-template-columns: 1fr; }
