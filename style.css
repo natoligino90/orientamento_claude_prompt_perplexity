@@ -187,7 +187,7 @@ section { padding: 72px 20px; }
 .funziona-disc strong { color: var(--sand); }
 
 /* ── COSA FACCIAMO ── */
-.facciamo { background: var(--cream); }
+.facciamo { background: var(--cream); padding-top: 20px; }
 .facciamo-grid { display: grid; grid-template-columns: 1fr; gap: 48px 72px; margin-top: 44px; align-items: start; }
 .facciamo-list { list-style: none; display: flex; flex-direction: column; gap: 18px; }
 .facciamo-list li { display: flex; align-items: flex-start; gap: 13px; font-size: .92rem; color: var(--text); line-height: 1.5; }
