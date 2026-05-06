@@ -80,7 +80,7 @@ nav {
 .nav-cta:hover { background: var(--t-l); }
 
 /* ── HERO ── */
-.hero { position: relative; min-height: 88vh; display: flex; align-items: center; overflow: hidden; }
+.hero { position: relative; min-height: 88vh; display: flex; align-items: flex-start; overflow: hidden; }
 .hero-bg {
   position: absolute;
   inset: 0;
@@ -100,7 +100,7 @@ nav {
   z-index: 1;
   max-width: 700px;
   margin: 0 auto;
-  padding: 20px 28px 80px;
+  padding: 20px 28px 0px;
   text-align: center;
 }
 .hero-logo-wrap { margin: 0 auto 32px; }
