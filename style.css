@@ -314,6 +314,7 @@ footer { background: var(--brown); color: rgba(255,255,255,.55); padding: 20px 2
   .hero h1 { font-size: clamp(1.8rem, 6vw, 2.6rem); }
    .hero-badge { font-size: 0.55rem; letter-spacing: .10em; padding: 4px 14px; }
    .btn-wa { padding: 11px 24px; font-size: .82rem; }
+   .hero { min-height: auto; }
    .hero-bg {
   background:
     linear-gradient(155deg,rgba(30,19,10,.80) 0%,rgba(158,78,34,.42) 50%,rgba(30,19,10,.68) 100%),
