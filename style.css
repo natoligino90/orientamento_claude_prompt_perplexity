@@ -346,9 +346,10 @@ footer { background: var(--brown); color: rgba(255,255,255,.55); padding: 20px 2
   }
 
   .btn-wa {
-    padding: 11px 24px;
-    font-size: .82rem;
-  }
+  padding: 10px 20px;
+  font-size: .78rem;
+  margin-top: -6px;
+}
 
   .hero {
   min-height: 92vh;
