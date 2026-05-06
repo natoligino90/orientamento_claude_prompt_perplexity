@@ -17,6 +17,27 @@
   <style>
     /* ESPERIENZE */
     .esperienze { background: var(--cream-d); padding: 20px 0; }
+    .esp-bg-a,
+.esp-bg-b {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transition: opacity .7s ease;
+  z-index: 0;
+}
+.esp-bg-a { opacity: 1; }
+.esp-bg-b { opacity: 0; }
+.esp-bg-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(245,235,216,0.65);
+  z-index: 1;
+}
+.esperienze { position: relative; }
+.esp-carousel-wrap,
+.esp-header,
+.container { position: relative; z-index: 2; }
 
     .esp-carousel-wrap { position: relative; }
     .esp-carousel {
@@ -256,6 +277,9 @@
 
   <!-- ESPERIENZE TESTATE -->
   <section class="esperienze" id="esperienze" aria-labelledby="esp-title">
+    <div class="esp-bg-a" id="espBgA" style="background-image:url('images/cards/card_cefalu.jpg')"></div>
+<div class="esp-bg-b" id="espBgB"></div>
+<div class="esp-bg-overlay" aria-hidden="true"></div>
     <div class="container" style="padding-bottom:16px; padding-left:20px; padding-right:20px;">
       <span class="section-tag reveal">Esperienze testate</span>
       <h2 class="section-title reveal" id="esp-title">Ci siamo stati - scarica gratis la guida</h2>
@@ -265,7 +289,7 @@
     <div class="esp-carousel-wrap">
       <div class="esp-carousel" id="espCarousel">
 
-        <div class="esp-card active" style="background-image:url('images/cards/card_cefalu.jpg')">
+        <div class="esp-card active" data-bg="images/cards/card_cefalu.jpg" style="background-image:url('images/cards/card_cefalu.jpg')">
           <span class="esp-zona">Mar Tirreno</span>
           <h3>Cefalù</h3>
           <p>Borgo medievale, spiaggia e duomo normanno.</p>
@@ -276,7 +300,7 @@
           </a>
         </div>
 
-        <div class="esp-card" style="background-image:url('images/cards/card_taormina.jpg')">
+        <div class="esp-card" data-bg="images/cards/card_taormina.jpg" style="background-image:url('images/cards/card_taormina.jpg')">
           <span class="esp-zona">Messina</span>
           <h3>Taormina</h3>
           <p>Teatro greco, vista sull'Etna, mare cristallino.</p>
@@ -287,7 +311,7 @@
           </a>
         </div>
 
-        <div class="esp-card" style="background-image:url('images/cards/card_etna.jpg')">
+        <div class="esp-card" data-bg="images/cards/card_etna.jpg" style="background-image:url('images/cards/card_etna.jpg')">
           <span class="esp-zona">Catania</span>
           <h3>Etna</h3>
           <p>Il vulcano piu alto d'Europa, per tutte le eta.</p>
@@ -298,7 +322,7 @@
           </a>
         </div>
 
-        <div class="esp-card" style="background-image:url('images/cards/card_isoleeolie.jpg')">
+        <div class="esp-card" data-bg="images/cards/card_isoleeolie.jpg" style="background-image:url('images/cards/card_isoleeolie.jpg')">
           <span class="esp-zona">Arcipelago</span>
           <h3>Isole Eolie</h3>
           <p>Mari turchesi e natura vulcanica unica.</p>
@@ -309,7 +333,7 @@
           </a>
         </div>
 
-        <div class="esp-card" style="background-image:url('images/cards/card_valledeitempli.jpg')">
+        <div class="esp-card" data-bg="images/cards/card_valledeitempli.jpg" style="background-image:url('images/cards/card_valledeitempli.jpg')">
           <span class="esp-zona">Agrigento</span>
           <h3>Valle dei Templi</h3>
           <p>UNESCO, storia greca e spiagge vicine.</p>
@@ -320,7 +344,7 @@
           </a>
         </div>
 
-        <div class="esp-card" style="background-image:url('images/cards/card_riservaZingaro.jpg')">
+        <div class="esp-card" data-bg="images/cards/card_riservaZingaro.jpg" style="background-image:url('images/cards/card_riservaZingaro.jpg')">
           <span class="esp-zona">Trapanese</span>
           <h3>Riserva Zingaro</h3>
           <p>Calette nascoste e acque da togliere il fiato.</p>
@@ -566,6 +590,9 @@
 
     // Carousel
     (function() {
+      const bgA = document.getElementById('espBgA');
+const bgB = document.getElementById('espBgB');
+let useA = true;
       const carousel = document.getElementById('espCarousel');
       const cards    = Array.from(carousel.querySelectorAll('.esp-card'));
       const dots     = Array.from(document.getElementById('espDots').querySelectorAll('.esp-dot'));
@@ -574,6 +601,17 @@
       function setActive(idx) {
         if (idx === current) return;
         current = idx;
+        const newBg = cards[idx].dataset.bg;
+if (useA) {
+  bgB.style.backgroundImage = "url('" + newBg + "')";
+  bgB.style.opacity = '1';
+  bgA.style.opacity = '0';
+} else {
+  bgA.style.backgroundImage = "url('" + newBg + "')";
+  bgA.style.opacity = '1';
+  bgB.style.opacity = '0';
+}
+useA = !useA;
         cards.forEach((c,i) => c.classList.toggle('active', i === idx));
         dots.forEach((d,i) => d.classList.toggle('active', i === idx));
       }
