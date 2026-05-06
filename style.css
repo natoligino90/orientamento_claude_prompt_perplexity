@@ -309,7 +309,7 @@ footer { background: var(--brown); color: rgba(255,255,255,.55); padding: 20px 2
   section        { padding: 56px 16px; }
   .dest-grid     { grid-template-columns: repeat(2,1fr); gap: 10px; }
   .footer-bottom { flex-direction: column; align-items: flex-start; }
-   .hero-logo-wrap img { height: 70px; }
+   .hero-logo-wrap img { height: 120px; }
   .hero-inner { padding: 10px 20px 0px; }
   .hero h1 { font-size: clamp(1.8rem, 6vw, 2.6rem); }
    .hero-badge { font-size: 0.55rem; letter-spacing: .10em; padding: 4px 14px; }
