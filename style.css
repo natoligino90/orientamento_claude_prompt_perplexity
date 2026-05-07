@@ -190,7 +190,7 @@ section { padding: 72px 20px; }
 .funziona-disc strong { color: var(--sand); }
 
 /* ── TRASPARENZA MINI ── */
-.trasparenza-mini {
+.trasparenza-mini { display: flex; flex-direction: column; gap: 14px; }
   background: var(--cream-d);
   padding: 20px 20px;
   border-top: 1px solid var(--border);
