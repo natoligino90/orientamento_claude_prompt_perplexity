@@ -1,4 +1,4 @@
-/* ============================================================
+ /* ============================================================
    SICILIA IN FAMIGLIA — style.css
    Palette: terracotta #C4622D · crema #FDFAF4 · bruno #1E130A
    ============================================================ */
@@ -190,19 +190,19 @@ section { padding: 72px 20px; }
 .funziona-disc strong { color: var(--sand); }
 
 /* ── TRASPARENZA MINI ── */
-.trasparenza-mini { display: flex; flex-direction: column; gap: 14px; }
+.trasparenza-mini { display: flex; flex-direction: column; gap: 14px; font-size: .65rem; align-items: center; }
   background: var(--cream-d);
-  padding: 18px 18px;
+  padding: 12px 20px;
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
-  font-size: .30rem;
   color: var(--text-l);
-  line-height: 1.50;
+  line-height: 1.65;
 }
 .trasparenza-mini strong { color: var(--text); font-weight: 500; }
-
+}
+.trasparenza-mini .btn-wa { padding: 10px 28px; font-size: .85rem; }
 /* ── COSA FACCIAMO ── */
-.facciamo { background: var(--cream); padding-top: 20px; }
+.facciamo { background: var(--cream); padding-top: 12px; }
 .facciamo-grid { display: grid; grid-template-columns: 1fr; gap: 48px 72px; margin-top: 44px; align-items: start; }
 .facciamo-list { list-style: none; display: flex; flex-direction: column; gap: 18px; }
 .facciamo-list li { display: flex; align-items: flex-start; gap: 13px; font-size: .92rem; color: var(--text); line-height: 1.5; }
