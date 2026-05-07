@@ -200,7 +200,7 @@ section { padding: 72px 20px; }
 }
 .trasparenza-mini strong { color: var(--text); font-weight: 500; }
 }
-.trasparenza-mini .btn-wa { padding: 10px 28px; font-size: .85rem; }
+.trasparenza-mini .btn-wa { padding: 10px 28px !important; font-size: .85rem !important; }
 /* ── COSA FACCIAMO ── */
 .facciamo { background: var(--cream); padding-top: 12px; }
 .facciamo-grid { display: grid; grid-template-columns: 1fr; gap: 48px 72px; margin-top: 44px; align-items: start; }
