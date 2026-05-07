@@ -192,12 +192,12 @@ section { padding: 72px 20px; }
 /* ── TRASPARENZA MINI ── */
 .trasparenza-mini { display: flex; flex-direction: column; gap: 14px; }
   background: var(--cream-d);
-  padding: 20px 20px;
+  padding: 18px 18px;
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
-  font-size: .40rem;
+  font-size: .30rem;
   color: var(--text-l);
-  line-height: 1.65;
+  line-height: 1.50;
 }
 .trasparenza-mini strong { color: var(--text); font-weight: 500; }
 
