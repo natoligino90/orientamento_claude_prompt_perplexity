@@ -195,7 +195,7 @@ section { padding: 72px 20px; }
   padding: 20px 20px;
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
-  font-size: .70rem;
+  font-size: .60rem;
   color: var(--text-l);
   line-height: 1.65;
 }
