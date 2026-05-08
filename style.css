@@ -678,10 +678,10 @@ footer { background: var(--brown); color: rgba(255,255,255,.55); padding: 20px 2
 }
 
 .dest-title{
-  font-family: var(--serif);
-  font-size: clamp(1.9rem,2.8vw,3rem);
-  line-height: 1.05;
-  letter-spacing: -0.03em;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2rem,2.8vw,3rem);
+  line-height: 1.02;
+  letter-spacing: -0.02em;
   color: var(--brown);
   margin-bottom: 18px;
   font-weight: 500;
@@ -838,9 +838,10 @@ footer { background: var(--brown); color: rgba(255,255,255,.55); padding: 20px 2
   }
 
   .dest-copy{
-    position: relative;
-    top: 0;
-  }
+  position: sticky;
+  top: 120px;
+  font-family: var(--sans);
+}
 
   .dest-sub{
     max-width: 100%;
