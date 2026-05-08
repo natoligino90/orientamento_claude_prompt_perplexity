@@ -736,10 +736,19 @@ footer { background: var(--brown); color: rgba(255,255,255,.55); padding: 20px 2
 
 .dest-scroll{
   display: flex;
-  gap: 22px;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 18px;
+
   overflow-x: auto;
-  padding-bottom: 10px;
-  scroll-snap-type: x mandatory;
+  overflow-y: hidden;
+
+  width: 100%;
+  max-width: 100%;
+
+  padding-bottom: 12px;
+
+  scrollbar-width: thin;
 }
 
 .dest-scroll::-webkit-scrollbar{
@@ -752,15 +761,21 @@ footer { background: var(--brown); color: rgba(255,255,255,.55); padding: 20px 2
 }
 
 .guide-card{
+  flex: 0 0 230px;
+
   width: 230px;
   min-width: 230px;
+  max-width: 230px;
+
   background: white;
   border-radius: 18px;
   overflow: hidden;
+
   border: 1px solid rgba(196,98,45,.08);
+
   box-shadow: 0 6px 20px rgba(30,19,10,.06);
+
   transition: .25s ease;
-  flex-shrink: 0;
 }
 
 .guide-card:hover{
