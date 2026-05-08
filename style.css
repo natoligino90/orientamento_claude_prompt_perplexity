@@ -836,3 +836,21 @@ section{
   }
 
 }
+
+/* FIX ICONA WHATSAPP */
+
+.btn-wa svg{
+  width: 18px !important;
+  height: 18px !important;
+
+  flex-shrink: 0;
+
+  fill: currentColor;
+}
+
+.btn-wa-circle svg{
+  width: 26px !important;
+  height: 26px !important;
+
+  fill: currentColor;
+}
