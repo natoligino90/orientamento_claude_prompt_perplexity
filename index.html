@@ -7,7 +7,7 @@
   <meta name="description" content="Sicilia in Famiglia offre un servizio gratuito di orientamento informativo per famiglie che desiderano scoprire la Sicilia." />
   <meta property="og:title" content="Sicilia in Famiglia - Orientamento gratuito" />
   <meta property="og:description" content="Ti aiutiamo a capire quale Sicilia fa per la tua famiglia. Servizio gratuito e senza impegni." />
-  <meta property="og:image" content="assets/og-image.jpg" />
+  <meta property="og:image" content="images/hero-main.jpg" />
   <meta property="og:type" content="website" />
   <link rel="icon" type="image/png" href="assets/favicon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -123,6 +123,11 @@
     }
     .esp-download:hover { background: var(--t-l); }
     .esp-download svg { width: 12px; height: 12px; flex-shrink: 0; }
+    .esp-download-disabled {
+      background: rgba(122,92,62,.55);
+      cursor: not-allowed;
+    }
+    .esp-download-disabled:hover { background: rgba(122,92,62,.55); }
 
     .esp-dots {
       display: flex;
@@ -304,10 +309,10 @@
           <h3>Taormina</h3>
           <p>Teatro greco, vista sull'Etna, mare cristallino.</p>
           <span class="esp-free">PDF Gratis</span>
-          <a class="esp-download" href="guides/taormina.pdf" download>
+          <span class="esp-download esp-download-disabled" aria-disabled="true">
             <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-            Scarica la guida
-          </a>
+            Guida in arrivo
+          </span>
         </div>
 
         <div class="esp-card" data-bg="images/cards/card_etna.jpg" style="background-image:url('images/cards/card_etna.jpg')">
@@ -326,7 +331,7 @@
           <h3>Isole Eolie</h3>
           <p>Mari turchesi e natura vulcanica unica.</p>
           <span class="esp-free">PDF Gratis</span>
-          <a class="esp-download" href="guides/isoleeolie.pdf" download>
+          <a class="esp-download" href="guides/isole-eolie.pdf" download>
             <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             Scarica la guida
           </a>
@@ -337,7 +342,7 @@
           <h3>Valle dei Templi</h3>
           <p>UNESCO, storia greca e spiagge vicine.</p>
           <span class="esp-free">PDF Gratis</span>
-          <a class="esp-download" href="guides/valledeitempli.pdf" download>
+          <a class="esp-download" href="guides/valle-dei-templi.pdf" download>
             <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             Scarica la guida
           </a>
@@ -348,7 +353,7 @@
           <h3>Riserva Zingaro</h3>
           <p>Calette nascoste e acque da togliere il fiato.</p>
           <span class="esp-free">PDF Gratis</span>
-          <a class="esp-download" href="guides/riservaZingaro.pdf" download>
+          <a class="esp-download" href="guides/riserva-zingaro.pdf" download>
             <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             Scarica la guida
           </a>
