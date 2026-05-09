@@ -189,7 +189,7 @@ section { padding: 72px 20px; }
 /* ── TRASPARENZA MINI ── */
 .trasparenza-mini {
   background: var(--cream-d);
-  padding: 16px 20px;
+  padding: 18px 20px;
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
 
@@ -201,6 +201,20 @@ section { padding: 72px 20px; }
   flex-direction: column;
   align-items: center;
   gap: 20px;
+}
+
+.trasparenza-mini-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  text-align: center;
+}
+
+.trasparenza-mini p {
+  max-width: 860px;
+  margin: 0 auto;
+  text-wrap: pretty;
 }
 
 .trasparenza-mini strong {
@@ -247,6 +261,7 @@ section { padding: 72px 20px; }
 .dest-info h3 { font-family: var(--serif); font-size: 1.08rem; font-weight: 500; color: var(--white); line-height: 1.15; margin-bottom: 2px; }
 .dest-info p { font-size: .67rem; color: rgba(255,255,255,.70); line-height: 1.38; }
 .dest-note { margin-top: 22px; font-size: .76rem; color: var(--text-l); font-style: italic; text-align: center; }
+.dest-cta { margin-top: 18px; }
 
 /* ── INTERMEZZO ── */
 .intermezzo { position: relative; padding: 90px 20px; text-align: center; overflow: hidden; }
@@ -353,6 +368,17 @@ footer { background: var(--brown); color: rgba(255,255,255,.55); padding: 20px 2
     font-size: .95rem;
   }
   .btn-wa { padding: 10px 20px; font-size: .78rem; }
+  .trasparenza-mini {
+    padding: 16px 18px;
+    font-size: .72rem;
+    line-height: 1.55;
+  }
+  .trasparenza-mini-inner {
+    gap: 12px;
+  }
+  .trasparenza-mini p {
+    max-width: 34rem;
+  }
   .hero { min-height: 78vh; }
   .hero-bg {
     background:
