@@ -192,15 +192,22 @@ section { padding: 72px 20px; }
   padding: 16px 20px;
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
+
   font-size: .78rem;
   color: var(--text-l);
   line-height: 1.65;
+
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 20px;
 }
-.trasparenza-mini strong { color: var(--text); font-weight: 500; }
+
+.trasparenza-mini strong {
+  color: var(--text);
+  font-weight: 500;
+}
+
 .trasparenza-mini .btn-wa {
   padding: 16px 42px !important;
   font-size: 1rem !important;
@@ -629,7 +636,6 @@ footer { background: var(--brown); color: rgba(255,255,255,.55); padding: 20px 2
   margin-bottom: 14px;
 }
 
-  .hero-sub{
   .hero-sub{
   margin-bottom: 18px;
   line-height: 1.45;
