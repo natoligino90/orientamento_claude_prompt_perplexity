@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sicilia in Famiglia - Orientamento gratuito per famiglie</title>
+  <meta name="description" content="Sicilia in Famiglia offre un servizio gratuito di orientamento informativo per famiglie che desiderano scoprire la Sicilia." />
+  <meta property="og:title" content="Sicilia in Famiglia - Orientamento gratuito" />
+  <meta property="og:description" content="Ti aiutiamo a capire quale Sicilia fa per la tua famiglia. Servizio gratuito e senza impegni." />
+  <meta property="og:image" content="images/hero-main.jpg" />
+  <meta property="og:type" content="website" />
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* ESPERIENZE */
+   .esperienze {
+  background: #F8F5F1;
+  padding: 72px 0 56px;
+  border-top: 1px solid rgba(196,98,45,.08);
+  border-bottom: 1px solid rgba(196,98,45,.08);
+  overflow: hidden;
+}
+
+    .esp-carousel-wrap { position: relative; }
+    .esp-carousel {
+  display: flex;
+  gap: 18px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+
+  padding: 10px 4px 18px;
+
+  scroll-snap-type: x mandatory;
+}
+
+.esp-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+    .esp-card {
+  flex-shrink: 0;
+
+  width: 240px;
+
+  border-radius: 24px;
+
+  padding: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  overflow: hidden;
+
+  scroll-snap-align: start;
+
+  background: #FFFFFF;
+
+  border: 1px solid rgba(196,98,45,.08);
+
+  box-shadow:
+    0 4px 18px rgba(30,19,10,.05);
+
+  transition:
+    transform .25s ease,
+    box-shadow .25s ease;
+
+  opacity: 1;
+
+  transform: none;
+
+  cursor: pointer;
+}
+    .esp-card.active {
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 14px 34px rgba(30,19,10,.10);
+}
+    .esp-zona {
+      font-size: .60rem;
+      font-weight: 500;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--t);
+    }
+   .esp-card h3 {
+  font-family: var(--serif);
+
+  font-size: 1.45rem;
+
+  font-weight: 500;
+
+  color: var(--brown);
+
+  line-height: 1.05;
+
+  margin-bottom: 10px;
+
+  letter-spacing: -.02em;
+
+  padding: 0 20px;
+}
+   .esp-card p {
+  font-size: .84rem;
+
+  color: var(--text-l);
+
+  line-height: 1.6;
+
+  padding: 0 20px;
+
+  margin-bottom: 16px;
+}
+    .esp-free {
+  display: inline-flex;
+
+  align-items: center;
+
+  width: fit-content;
+
+  margin: 0 20px 18px;
+
+  padding: 6px 12px;
+
+  border-radius: 999px;
+
+  background: rgba(196,98,45,.08);
+
+  color: var(--t-d);
+
+  font-size: .66rem;
+
+  font-weight: 600;
+
+  letter-spacing: .08em;
+
+  text-transform: uppercase;
+}
+    .esp-download {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 8px;
+
+  width: calc(100% - 40px);
+
+  margin: auto 20px 20px;
+
+  padding: 14px 16px;
+
+  border-radius: 14px;
+
+  background: var(--t);
+
+  color: var(--white);
+
+  font-size: .78rem;
+
+  font-weight: 600;
+
+  letter-spacing: .03em;
+
+  transition:
+    background .2s ease,
+    transform .2s ease;
+}
+    .esp-download:hover {
+  background: var(--t-l);
+
+  transform: translateY(-1px);
+}
+    .esp-download svg { width: 12px; height: 12px; flex-shrink: 0; }
+    .esp-download-disabled {
+      background: rgba(122,92,62,.55);
+      cursor: not-allowed;
+    }
+    .esp-download-disabled:hover { background: rgba(122,92,62,.55); }
+
+    .esp-dots {
+      display: flex;
+      justify-content: flex-start;
+      gap: 7px;
+      margin-top: 12px;
+      padding-left: 20px;
+    }
+    .esp-dot {
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: rgba(196,98,45,.25);
+      transition: background .3s, transform .3s;
+      cursor: pointer;
+    }
+    .esp-dot.active { background: var(--t); transform: scale(1.3); }
+    .esp-note { margin-top: 20px; font-size: .74rem; color: var(--text-l); font-style: italic; padding: 0 20px; }
+
+  </style>
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <div class="topbar" role="banner">
+    <strong>Orientamento gratuito per famiglie.</strong>
+    Formalizzazione e garanzie a cura del tour operator di riferimento per la destinazione scelta.
+  </div>
+
+  <!-- NAV -->
+  <nav aria-label="Navigazione principale">
+    <a href="#top" class="nav-logo" aria-label="Sicilia in Famiglia - torna in cima">
+      <img src="assets/logo-sicilia-famiglia.png" alt="Sicilia in Famiglia" />
+    </a>
+    <ul class="nav-links" role="list">
+      <li><a href="#come-funziona">Come funziona</a></li>
+      <li><a href="#cosa-facciamo">Il servizio</a></li>
+      <li><a href="#destinazioni">Destinazioni</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+    <a class="nav-cta" href="https://wa.me/+393205532756" target="_blank" rel="noopener noreferrer">
+      Raccontaci la tua famiglia
+    </a>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="top" aria-labelledby="hero-title">
+    <div class="hero-bg" role="presentation" aria-hidden="true"></div>
+    <div class="hero-inner">
+      <div class="hero-logo-wrap" aria-hidden="true">
+        <img src="assets/favicon.png" alt="" />
+      </div>
+      <div class="hero-badge">Servizio gratuito di orientamento informativo</div>
+      <h1 id="hero-title">Scopri la Sicilia<br>con la tua <em>famiglia</em></h1>
+      <p class="hero-sub">
+        Ti aiutiamo a capire quali zone e quali soluzioni possono essere
+        piu adatte alla tua famiglia - senza costi, senza impegni.
+      </p>
+          
+    </div>
+  </section>
+<section class="trasparenza-mini" aria-label="Nota trasparenza">
+  <div class="container trasparenza-mini-inner">
+    <p><strong>Trasparenza.</strong> Sicilia in Famiglia offre un orientamento gratuito. Se desideri procedere, prenotazione, contratto, pagamento e garanzie sono gestiti <strong>esclusivamente dal tour operator di riferimento per la destinazione scelta</strong>. Sicilia in Famiglia non incassa somme e non conclude contratti turistici.</p>
+    <a class="btn-wa reveal" href="https://wa.me/+393205532756" target="_blank" rel="noopener noreferrer">
+        <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M20.52 3.48A11.93 11.93 0 0 0 12 0C5.37 0 0 5.37 0 12c0 2.11.55 4.16 1.6 5.97L0 24l6.22-1.63A11.94 11.94 0 0 0 12 24c6.63 0 12-5.37 12-12 0-3.2-1.25-6.21-3.48-8.52zM12 22c-1.85 0-3.65-.5-5.22-1.44l-.37-.22-3.86 1.01 1.03-3.74-.24-.38A9.94 9.94 0 0 1 2 12C2 6.48 6.48 2 12 2c2.67 0 5.18 1.04 7.07 2.93A9.93 9.93 0 0 1 22 12c0 5.52-4.48 10-10 10zm5.44-7.6c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15s-.77.96-.94 1.16c-.17.2-.35.22-.65.07A8.22 8.22 0 0 1 9.6 13.1c-.42-.72-.7-1.52-.78-2.35-.08-.82.18-1.6.72-2.19.19-.2.38-.39.6-.54.22-.15.3-.09.44.06.14.15.6.73.73.88.13.15.13.28 0 .43-.13.15-.3.35-.43.53-.13.18-.1.37.02.54.43.59.96 1.1 1.57 1.51.61.41 1.28.7 1.98.87.2.05.37.02.5-.1.13-.12.57-.66.72-.88.15-.22.3-.18.5-.11.2.07 1.72.81 2.02.96.3.15.5.22.57.35.07.13.07.76-.22 1.06z"/></svg>
+        Iniziamo da qui
+</a>
+  </div>
+</section>
+  <!-- COSA FACCIAMO -->
+  <section class="facciamo" id="cosa-facciamo" aria-labelledby="facciamo-title">
+    <div class="container">
+      <div class="facciamo-grid" style="grid-template-columns:1fr">
+        <div>
+          <span class="section-tag reveal">Il nostro supporto</span>
+          <h2 class="section-title reveal" id="facciamo-title">Cosa facciamo per te</h2>
+          <div class="divider reveal" aria-hidden="true"></div>
+          <p class="section-lead reveal">
+            Indicazioni utili per orientarti tra diverse tipologie di soggiorno.
+            Se vorrai andare avanti, ti metteremo in contatto con il tour operator
+            piu adatto per la destinazione che scegli.
+          </p>
+          <ul class="facciamo-list" style="margin-top:32px" role="list">
+            <li class="reveal">
+              <div class="icon-wrap" aria-hidden="true">
+                <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              </div>
+              <div>
+                <strong>Ascolto delle esigenze della famiglia</strong><br>
+                <span style="font-size:.82rem;color:var(--text-l)">Preferenze, eta dei bambini, periodo desiderato e aspettative di viaggio.</span>
+              </div>
+            </li>
+            <li class="reveal">
+              <div class="icon-wrap" aria-hidden="true">
+                <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              </div>
+              <div>
+                <strong>Orientamento sulle zone della Sicilia</strong><br>
+                <span style="font-size:.82rem;color:var(--text-l)">Quali aree possono essere piu compatibili con le vostre aspettative.</span>
+              </div>
+            </li>
+            <li class="reveal">
+              <div class="icon-wrap" aria-hidden="true">
+                <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+              </div>
+              <div>
+                <strong>Supporto nella lettura delle opzioni disponibili</strong><br>
+                <span style="font-size:.82rem;color:var(--text-l)">Differenze tra tipologie di soggiorno spiegate in modo semplice.</span>
+              </div>
+            </li>
+            <li class="reveal">
+              <div class="icon-wrap" aria-hidden="true">
+                <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+              </div>
+              <div>
+                <strong>Aiuto nel capire le strutture piu adatte</strong><br>
+                <span style="font-size:.82rem;color:var(--text-l)">Caratteristiche utili in base alla composizione del gruppo familiare.</span>
+              </div>
+            </li>
+            <li class="reveal">
+              <div class="icon-wrap" aria-hidden="true">
+                <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.45 2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.97a16 16 0 0 0 6 6l1.27-.88a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <div>
+                <strong>Collegamento con il tour operator per eventuale formalizzazione</strong><br>
+                <span style="font-size:.82rem;color:var(--text-l)">Ti mettiamo in contatto con il tour operator piu adatto per la destinazione scelta.</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ESPERIENZE TESTATE -->
+  <section class="esperienze" id="esperienze" aria-labelledby="esp-title">
+    
+<div class="esp-bg-overlay" aria-hidden="true"></div>
+    <div class="container" style="padding-bottom:16px; padding-left:20px; padding-right:20px;">
+      <span class="section-tag reveal">Esperienze testate</span>
+      <h2 class="section-title reveal" id="esp-title">Ci siamo stati - scarica gratis la guida</h2>
+            <p class="section-lead reveal">Guide PDF gratuite scritte con occhi da famiglia. Scarica, leggi, parti.</p>
+    </div>
+
+   <div class="esp-carousel-wrap container">
+  <div class="esp-carousel" id="espCarousel">
+
+           <div class="esp-card active" data-bg="images/cards/card_cefalu.jpg" style="background-image:url('images/cards/card_cefalu.jpg')">
+          <span class="esp-zona">Mar Tirreno</span>
+          <h3>Cefalù</h3>
+          <p>Borgo medievale, spiaggia e duomo normanno.</p>
+          <span class="esp-free">PDF Gratis</span>
+          <a class="esp-download" href="guides/cefalu.pdf" download>
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Scarica la guida
+          </a>
+        </div>
+
+        <div class="esp-card" data-bg="images/cards/card_taormina.jpg" style="background-image:url('images/cards/card_taormina.jpg')">
+          <span class="esp-zona">Messina</span>
+          <h3>Taormina</h3>
+          <p>Teatro greco, vista sull'Etna, mare cristallino.</p>
+          <span class="esp-free">PDF Gratis</span>
+          <span class="esp-download esp-download-disabled" aria-disabled="true">
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Guida in arrivo
+          </span>
+        </div>
+
+        <div class="esp-card" data-bg="images/cards/card_etna.jpg" style="background-image:url('images/cards/card_etna.jpg')">
+          <span class="esp-zona">Catania</span>
+          <h3>Etna</h3>
+          <p>Il vulcano piu alto d'Europa, per tutte le eta.</p>
+          <span class="esp-free">PDF Gratis</span>
+          <a class="esp-download" href="guides/etna.pdf" download>
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Scarica la guida
+          </a>
+        </div>
+
+        <div class="esp-card" data-bg="images/cards/card_isoleeolie.jpg" style="background-image:url('images/cards/card_isoleeolie.jpg')">
+          <span class="esp-zona">Arcipelago</span>
+          <h3>Isole Eolie</h3>
+          <p>Mari turchesi e natura vulcanica unica.</p>
+          <span class="esp-free">PDF Gratis</span>
+          <a class="esp-download" href="guides/isole-eolie.pdf" download>
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Scarica la guida
+          </a>
+        </div>
+
+        <div class="esp-card" data-bg="images/cards/card_valledeitempli.jpg" style="background-image:url('images/cards/card_valledeitempli.jpg')">
+          <span class="esp-zona">Agrigento</span>
+          <h3>Valle dei Templi</h3>
+          <p>UNESCO, storia greca e spiagge vicine.</p>
+          <span class="esp-free">PDF Gratis</span>
+          <a class="esp-download" href="guides/valle-dei-templi.pdf" download>
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Scarica la guida
+          </a>
+        </div>
+
+        <div class="esp-card" data-bg="images/cards/card_riservaZingaro.jpg" style="background-image:url('images/cards/card_riservaZingaro.jpg')">
+          <span class="esp-zona">Trapanese</span>
+          <h3>Riserva Zingaro</h3>
+          <p>Calette nascoste e acque da togliere il fiato.</p>
+          <span class="esp-free">PDF Gratis</span>
+          <a class="esp-download" href="guides/riserva-zingaro.pdf" download>
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Scarica la guida
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="esp-dots" id="espDots" aria-hidden="true">
+        <div class="esp-dot active"></div>
+        <div class="esp-dot"></div>
+        <div class="esp-dot"></div>
+        <div class="esp-dot"></div>
+        <div class="esp-dot"></div>
+        <div class="esp-dot"></div>
+      </div>
+      <p class="esp-note reveal">Guide informative gratuite. Non costituiscono offerta commerciale.</p>
+    </div>
+  </section>
+
+  <!-- DESTINAZIONI -->
+  <section class="destinazioni" id="destinazioni" aria-labelledby="dest-title">
+    <div class="container">
+      <span class="section-tag reveal">Scopri la Sicilia</span>
+      <h2 class="section-title reveal" id="dest-title">Zone che vale la pena conoscere</h2>
+      <div class="divider reveal" aria-hidden="true"></div>
+      <p class="section-lead reveal">Un assaggio editoriale delle aree che le famiglie trovano piu interessanti. Scrivici per capire quale fa per voi.</p>
+      <div class="dest-grid">
+        <article class="dest-card reveal"><img src="images/agrigento.jpg" alt="Agrigento" loading="lazy" /><div class="dest-overlay" aria-hidden="true"></div><div class="dest-info"><span class="dest-tag">Agrigento</span><h3>Agrigento</h3><p>Valle dei Templi e spiagge dorate.</p></div></article>
+        <article class="dest-card reveal"><img src="images/catania.jpg" alt="Catania" loading="lazy" /><div class="dest-overlay" aria-hidden="true"></div><div class="dest-info"><span class="dest-tag">Etna e Citta</span><h3>Catania</h3><p>Barocco e vulcano a portata di mano.</p></div></article>
+        <article class="dest-card reveal"><img src="images/cefalu.jpg" alt="Cefalu" loading="lazy" /><div class="dest-overlay" aria-hidden="true"></div><div class="dest-info"><span class="dest-tag">Mar Tirreno</span><h3>Cefalu</h3><p>Borgo medievale e spiagge raccolte.</p></div></article>
+        <article class="dest-card reveal"><img src="images/isole-eolie.jpg" alt="Isole Eolie" loading="lazy" /><div class="dest-overlay" aria-hidden="true"></div><div class="dest-info"><span class="dest-tag">Arcipelago</span><h3>Isole Eolie</h3><p>Mare e natura vulcanica unica.</p></div></article>
+        <article class="dest-card reveal"><img src="images/palermo.jpg" alt="Palermo" loading="lazy" /><div class="dest-overlay" aria-hidden="true"></div><div class="dest-info"><span class="dest-tag">Capitale</span><h3>Palermo</h3><p>Arte, mercati e sapori autentici.</p></div></article>
+        <article class="dest-card reveal"><img src="images/ragusa.jpg" alt="Ragusa" loading="lazy" /><div class="dest-overlay" aria-hidden="true"></div><div class="dest-info"><span class="dest-tag">Val di Noto</span><h3>Ragusa</h3><p>Ibla barocca e campagna sicula.</p></div></article>
+        <article class="dest-card reveal"><img src="images/san-vito-lo-capo.jpg" alt="San Vito Lo Capo" loading="lazy" /><div class="dest-overlay" aria-hidden="true"></div><div class="dest-info"><span class="dest-tag">Trapanese</span><h3>San Vito Lo Capo</h3><p>Spiaggia bianca tra le piu belle d'Italia.</p></div></article>
+        <article class="dest-card reveal"><img src="images/siracusa.jpg" alt="Siracusa" loading="lazy" /><div class="dest-overlay" aria-hidden="true"></div><div class="dest-info"><span class="dest-tag">Orientale</span><h3>Siracusa</h3><p>Ortigia, storia greca e mare limpido.</p></div></article>
+        <article class="dest-card reveal"><img src="images/taormina.jpg" alt="Taormina" loading="lazy" /><div class="dest-overlay" aria-hidden="true"></div><div class="dest-info"><span class="dest-tag">Messina</span><h3>Taormina</h3><p>Teatro greco e panorami sull'Etna.</p></div></article>
+        <article class="dest-card reveal"><img src="images/trapani.jpg" alt="Trapani" loading="lazy" /><div class="dest-overlay" aria-hidden="true"></div><div class="dest-info"><span class="dest-tag">Occidentale</span><h3>Trapani</h3><p>Saline, Erice e le isole Egadi.</p></div></article>
+      </div>
+      <p class="dest-note reveal">Destinazioni presentate a titolo puramente informativo e ispirazionale. Nessun prezzo o disponibilita e indicato.</p>
+      <div style="text-align:center">
+        <a class="btn-wa dest-cta reveal" href="https://wa.me/+393205532756" target="_blank" rel="noopener noreferrer" aria-label="Dicci dove vuoi andare">
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M20.52 3.48A11.93 11.93 0 0 0 12 0C5.37 0 0 5.37 0 12c0 2.11.55 4.16 1.6 5.97L0 24l6.22-1.63A11.94 11.94 0 0 0 12 24c6.63 0 12-5.37 12-12 0-3.2-1.25-6.21-3.48-8.52zM12 22c-1.85 0-3.65-.5-5.22-1.44l-.37-.22-3.86 1.01 1.03-3.74-.24-.38A9.94 9.94 0 0 1 2 12C2 6.48 6.48 2 12 2c2.67 0 5.18 1.04 7.07 2.93A9.93 9.93 0 0 1 22 12c0 5.52-4.48 10-10 10zm5.44-7.6c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15s-.77.96-.94 1.16c-.17.2-.35.22-.65.07A8.22 8.22 0 0 1 9.6 13.1c-.42-.72-.7-1.52-.78-2.35-.08-.82.18-1.6.72-2.19.19-.2.38-.39.6-.54.22-.15.3-.09.44.06.14.15.6.73.73.88.13.15.13.28 0 .43-.13.15-.3.35-.43.53-.13.18-.1.37.02.54.43.59.96 1.1 1.57 1.51.61.41 1.28.7 1.98.87.2.05.37.02.5-.1.13-.12.57-.66.72-.88.15-.22.3-.18.5-.11.2.07 1.72.81 2.02.96.3.15.5.22.57.35.07.13.07.76-.22 1.06z"/></svg>
+          Dicci dove vuoi andare
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- COME FUNZIONA -->
+  <section class="funziona" id="come-funziona" aria-labelledby="funziona-title">
+    <div class="container">
+      <span class="section-tag reveal">Come funziona</span>
+      <h2 class="section-title reveal" id="funziona-title">Tre passi semplici,<br>nessun impegno</h2>
+      <p class="section-lead reveal">Servizio completamente gratuito. Non chiediamo dati sensibili e non gestiamo pagamenti. Il nostro ruolo e esclusivamente di orientamento iniziale.</p>
+      <div class="steps">
+        <article class="step reveal">
+          <div class="step-num">01</div>
+          <h3>Ci racconti la tua famiglia</h3>
+          <p>Quanti siete, le eta dei bambini, quando partireste, cosa vi piace fare. Ascoltiamo con attenzione.</p>
+        </article>
+        <article class="step reveal">
+          <div class="step-num">02</div>
+          <h3>Ti forniamo orientamento informativo</h3>
+          <p>Un primo orientamento su aree e tipologie di soggiorno <strong>in linea con le tue esigenze</strong>, senza intermediazione commerciale.</p>
+        </article>
+        <article class="step reveal">
+          <div class="step-num">03</div>
+          <h3>Se vuoi procedere, ti mettiamo in contatto con il tour operator</h3>
+          <p>Formalizzazione, contratto, pagamento e garanzie gestiti <strong>esclusivamente dal tour operator di riferimento per la destinazione scelta</strong>.</p>
+        </article>
+      </div>
+      <div class="funziona-disc reveal" role="note">
+        <strong>Nota.</strong> Sicilia in Famiglia svolge esclusivamente un'attivita di orientamento informativo. Non e un'agenzia di viaggi. Il soggetto che conclude il contratto e <strong>il tour operator di riferimento per la destinazione scelta</strong>.
+      </div>
+    </div>
+  </section>
+
+  <!-- COSA NON FACCIAMO -->
+  <section class="non-facciamo" aria-labelledby="nonfacciamo-title">
+    <div class="container">
+      <span class="section-tag reveal">Trasparenza e chiarezza</span>
+      <h2 class="section-title reveal" id="nonfacciamo-title">Cosa <em style="font-family:'Cormorant Garamond',serif;font-style:italic">non</em> facciamo</h2>
+      <div class="divider reveal" aria-hidden="true"></div>
+      <p class="section-lead reveal">Riteniamo fondamentale essere chiari su cio che il servizio non comprende e non puo offrire.</p>
+      <div class="non-grid">
+        <article class="non-card reveal"><div class="x-icon"><svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></div><h4>Non siamo un'agenzia di viaggi</h4><p>Offriamo esclusivamente orientamento informativo iniziale.</p></article>
+        <article class="non-card reveal"><div class="x-icon"><svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></div><h4>Non incassiamo pagamenti</h4><p>I pagamenti sono a cura del tour operator per la destinazione scelta.</p></article>
+        <article class="non-card reveal"><div class="x-icon"><svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></div><h4>Non emettiamo contratti</h4><p>Conferme e documenti sono competenza del tour operator di riferimento.</p></article>
+        <article class="non-card reveal"><div class="x-icon"><svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></div><h4>Non rispondiamo dei servizi</h4><p>Garanzie e coperture sono responsabilita del tour operator che gestisce la prenotazione.</p></article>
+        <article class="non-card reveal"><div class="x-icon"><svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></div><h4>Non sostituiamo il tour operator</h4><p>Il rapporto contrattuale e esclusivamente tra la famiglia e il tour operator di riferimento.</p></article>
+      </div>
+      <div class="non-note reveal" role="note">
+        <strong>In sintesi:</strong> offriamo esclusivamente orientamento informativo iniziale. Se desideri procedere, ti metteremo in contatto con <strong>il tour operator piu adatto per la destinazione che scegli</strong>.
+      </div>
+    </div>
+  </section>
+
+  <!-- INTERMEZZO -->
+  <section class="intermezzo" aria-label="Invito al contatto">
+    <div class="intermezzo-bg" role="presentation" aria-hidden="true"></div>
+    <div class="intermezzo-inner">
+      <span class="section-tag reveal">Parliamoci</span>
+      <h2 class="section-title reveal">Ogni famiglia ha la sua <em style="font-style:italic">Sicilia</em></h2>
+      <p class="reveal">Non esistono soluzioni uguali per tutti. Raccontaci chi siete e ti aiutiamo a capire da dove cominciare - gratuitamente, senza fretta e senza impegni.</p>
+      <a class="btn-wa reveal" href="https://wa.me/+393205532756" target="_blank" rel="noopener noreferrer">
+        <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M20.52 3.48A11.93 11.93 0 0 0 12 0C5.37 0 0 5.37 0 12c0 2.11.55 4.16 1.6 5.97L0 24l6.22-1.63A11.94 11.94 0 0 0 12 24c6.63 0 12-5.37 12-12 0-3.2-1.25-6.21-3.48-8.52zM12 22c-1.85 0-3.65-.5-5.22-1.44l-.37-.22-3.86 1.01 1.03-3.74-.24-.38A9.94 9.94 0 0 1 2 12C2 6.48 6.48 2 12 2c2.67 0 5.18 1.04 7.07 2.93A9.93 9.93 0 0 1 22 12c0 5.52-4.48 10-10 10zm5.44-7.6c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15s-.77.96-.94 1.16c-.17.2-.35.22-.65.07A8.22 8.22 0 0 1 9.6 13.1c-.42-.72-.7-1.52-.78-2.35-.08-.82.18-1.6.72-2.19.19-.2.38-.39.6-.54.22-.15.3-.09.44.06.14.15.6.73.73.88.13.15.13.28 0 .43-.13.15-.3.35-.43.53-.13.18-.1.37.02.54.43.59.96 1.1 1.57 1.51.61.41 1.28.7 1.98.87.2.05.37.02.5-.1.13-.12.57-.66.72-.88.15-.22.3-.18.5-.11.2.07 1.72.81 2.02.96.3.15.5.22.57.35.07.13.07.76-.22 1.06z"/></svg>
+        Scrivici senza impegno
+      </a>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq" id="faq" aria-labelledby="faq-title">
+    <div class="container">
+      <span class="section-tag reveal">Domande frequenti</span>
+      <h2 class="section-title reveal" id="faq-title">Trasparenza su chi siamo<br>e cosa offriamo</h2>
+      <p class="section-lead reveal" style="margin-bottom:0">Risposte chiare sul funzionamento del servizio.</p>
+      <div class="faq-list reveal" role="list">
+        <div class="faq-item" role="listitem">
+          <button class="faq-q" aria-expanded="false" aria-controls="faq-a1" id="faq-q1">Chi gestisce la prenotazione?<svg class="chevron" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-a" id="faq-a1" role="region" aria-labelledby="faq-q1">L'eventuale formalizzazione e gestita esclusivamente dal <strong>tour operator di riferimento per la destinazione scelta</strong>. Sicilia in Famiglia non effettua prenotazioni e non emette alcuna conferma.</div>
+        </div>
+        <div class="faq-item" role="listitem">
+          <button class="faq-q" aria-expanded="false" aria-controls="faq-a2" id="faq-q2">Chi incassa il pagamento?<svg class="chevron" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-a" id="faq-a2" role="region" aria-labelledby="faq-q2">Nessuna somma viene raccolta da Sicilia in Famiglia. Il pagamento e gestito dal <strong>tour operator di riferimento per la destinazione scelta</strong>.</div>
+        </div>
+        <div class="faq-item" role="listitem">
+          <button class="faq-q" aria-expanded="false" aria-controls="faq-a3" id="faq-q3">Con chi concludo il contratto?<svg class="chevron" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-a" id="faq-a3" role="region" aria-labelledby="faq-q3">Il contratto viene concluso con il <strong>tour operator di riferimento per la destinazione scelta</strong>, soggetto giuridicamente responsabile che fornisce tutte le condizioni e le garanzie previste dalla normativa.</div>
+        </div>
+        <div class="faq-item" role="listitem">
+          <button class="faq-q" aria-expanded="false" aria-controls="faq-a4" id="faq-q4">Sicilia in Famiglia e un'agenzia di viaggi?<svg class="chevron" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-a" id="faq-a4" role="region" aria-labelledby="faq-q4">No. <strong>Sicilia in Famiglia non e un'agenzia di viaggi ne un tour operator.</strong> Il servizio consiste esclusivamente in orientamento e segnalazione informativa a titolo gratuito.</div>
+        </div>
+        <div class="faq-item" role="listitem">
+          <button class="faq-q" aria-expanded="false" aria-controls="faq-a5" id="faq-q5">Il servizio ha un costo?<svg class="chevron" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-a" id="faq-a5" role="region" aria-labelledby="faq-q5"><strong>Il servizio di orientamento informativo e completamente gratuito.</strong> Non sono previsti costi, commissioni o compensi di alcun tipo.</div>
+        </div>
+        <div class="faq-item" role="listitem">
+          <button class="faq-q" aria-expanded="false" aria-controls="faq-a6" id="faq-q6">Chi fornisce le condizioni economiche e le garanzie?<svg class="chevron" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-a" id="faq-a6" role="region" aria-labelledby="faq-q6">Tutte le condizioni contrattuali, le garanzie e le coperture assicurative sono fornite dal <strong>tour operator di riferimento per la destinazione scelta</strong>.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINALE -->
+  <section class="cta-section" aria-labelledby="cta-title">
+    <div class="container">
+      <span class="section-tag reveal">Inizia da qui</span>
+      <h2 class="section-title reveal" id="cta-title">Hai domande sulla Sicilia<br>per la tua famiglia?</h2>
+      <p class="section-lead reveal">Scrivici su WhatsApp per un orientamento iniziale gratuito. Nessun impegno, nessun costo, nessuna fretta.</p>
+      <a class="btn-wa reveal" href="https://wa.me/+393205532756" target="_blank" rel="noopener noreferrer">
+        <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M20.52 3.48A11.93 11.93 0 0 0 12 0C5.37 0 0 5.37 0 12c0 2.11.55 4.16 1.6 5.97L0 24l6.22-1.63A11.94 11.94 0 0 0 12 24c6.63 0 12-5.37 12-12 0-3.2-1.25-6.21-3.48-8.52zM12 22c-1.85 0-3.65-.5-5.22-1.44l-.37-.22-3.86 1.01 1.03-3.74-.24-.38A9.94 9.94 0 0 1 2 12C2 6.48 6.48 2 12 2c2.67 0 5.18 1.04 7.07 2.93A9.93 9.93 0 0 1 22 12c0 5.52-4.48 10-10 10zm5.44-7.6c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15s-.77.96-.94 1.16c-.17.2-.35.22-.65.07A8.22 8.22 0 0 1 9.6 13.1c-.42-.72-.7-1.52-.78-2.35-.08-.82.18-1.6.72-2.19.19-.2.38-.39.6-.54.22-.15.3-.09.44.06.14.15.6.73.73.88.13.15.13.28 0 .43-.13.15-.3.35-.43.53-.13.18-.1.37.02.54.43.59.96 1.1 1.57 1.51.61.41 1.28.7 1.98.87.2.05.37.02.5-.1.13-.12.57-.66.72-.88.15-.22.3-.18.5-.11.2.07 1.72.81 2.02.96.3.15.5.22.57.35.07.13.07.76-.22 1.06z"/></svg>
+        Scrivici su WhatsApp
+      </a>
+      <p class="cta-note reveal">Servizio gratuito e senza impegno. Prenotazioni e contratti a cura del tour operator di riferimento.</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <img src="assets/logo-sicilia-famiglia.png" alt="Sicilia in Famiglia" />
+          </div>
+          <p>Servizio gratuito di orientamento informativo per famiglie. Non siamo un'agenzia di viaggi. La formalizzazione e a cura del tour operator di riferimento per la destinazione scelta.</p>
+          <div class="footer-contact">
+            <a href="https://wa.me/+393205532756" target="_blank" rel="noopener noreferrer">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="#25D366" aria-hidden="true"><path d="M20.52 3.48A11.93 11.93 0 0 0 12 0C5.37 0 0 5.37 0 12c0 2.11.55 4.16 1.6 5.97L0 24l6.22-1.63A11.94 11.94 0 0 0 12 24c6.63 0 12-5.37 12-12 0-3.2-1.25-6.21-3.48-8.52z"/></svg>
+              WhatsApp (+393205532756)
+            </a>
+            <a href="mailto:siciliainfamiglia@outlook.it">✉ siciliainfamiglia@outlook.it</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Navigazione</h4>
+          <ul>
+            <li><a href="#cosa-facciamo">Il servizio</a></li>
+            <li><a href="#esperienze">Guide gratuite</a></li>
+            <li><a href="#destinazioni">Destinazioni</a></li>
+            <li><a href="#come-funziona">Come funziona</a></li>
+            <li><a href="#faq">FAQ Trasparenza</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legale</h4>
+          <ul>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="cookie-policy.html">Cookie Policy</a></li>
+            <li><a href="termini.html">Termini del servizio</a></li>
+            <li><a href="disclaimer.html">Disclaimer</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-disc" role="note">
+        <strong>Informativa legale</strong><br><br>
+        Sicilia in Famiglia offre esclusivamente un servizio gratuito di orientamento informativo.
+        <strong>Non e un'agenzia di viaggi e non vende pacchetti turistici.</strong>
+        Non incassa somme, non emette conferme di prenotazione e non gestisce rapporti contrattuali.<br><br>
+        Contratto, pagamento, condizioni generali e garanzie sono gestiti
+        <strong>esclusivamente dal tour operator di riferimento per la destinazione scelta</strong>.
+      </div>
+      <div class="footer-bottom">
+        <span>© <span id="year"></span> Sicilia in Famiglia. Tutti i diritti riservati.</span>
+        <nav class="footer-legal" aria-label="Link legali">
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <a href="cookie-policy.html">Cookie Policy</a>
+          <a href="termini.html">Termini</a>
+          <a href="disclaimer.html">Disclaimer</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SCRIPT -->
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // FAQ
+    document.querySelectorAll('.faq-q').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const isOpen = btn.classList.contains('open');
+        document.querySelectorAll('.faq-q').forEach(b => { b.classList.remove('open'); b.setAttribute('aria-expanded','false'); });
+        document.querySelectorAll('.faq-a').forEach(a => a.classList.remove('open'));
+        if (!isOpen) { btn.classList.add('open'); btn.setAttribute('aria-expanded','true'); document.getElementById(btn.getAttribute('aria-controls')).classList.add('open'); }
+      });
+    });
+
+    // Scroll reveal
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+    }, { threshold: 0.10, rootMargin: '0px 0px -32px 0px' });
+    document.querySelectorAll('.reveal').forEach((el,i) => { el.style.transitionDelay = (i%5)*0.07+'s'; obs.observe(el); });
+
+    // Carousel
+    (function() {
+      const bgA = document.getElementById('espBgA');
+const bgB = document.getElementById('espBgB');
+let useA = true;
+      const carousel = document.getElementById('espCarousel');
+      const cards    = Array.from(carousel.querySelectorAll('.esp-card'));
+      const dots     = Array.from(document.getElementById('espDots').querySelectorAll('.esp-dot'));
+      let current    = 0;
+
+      function setActive(idx) {
+        if (idx === current) return;
+        current = idx;
+        const newBg = cards[idx].dataset.bg;
+if (useA) {
+  bgB.style.backgroundImage = "url('" + newBg + "')";
+  bgB.style.opacity = '1';
+  bgA.style.opacity = '0';
+} else {
+  bgA.style.backgroundImage = "url('" + newBg + "')";
+  bgA.style.opacity = '1';
+  bgB.style.opacity = '0';
+}
+useA = !useA;
+        cards.forEach((c,i) => c.classList.toggle('active', i === idx));
+        dots.forEach((d,i) => d.classList.toggle('active', i === idx));
+      }
+
+      let scrollTimer;
+      carousel.addEventListener('scroll', () => {
+        clearTimeout(scrollTimer);
+        scrollTimer = setTimeout(() => {
+          let closest = 0, minDist = Infinity;
+          const cCenter = carousel.scrollLeft + carousel.offsetWidth / 2;
+          cards.forEach((c,i) => {
+            const dist = Math.abs(c.offsetLeft + c.offsetWidth / 2 - cCenter);
+            if (dist < minDist) { minDist = dist; closest = i; }
+          });
+          setActive(closest);
+        }, 60);
+      });
+
+      dots.forEach((d,i) => {
+        d.addEventListener('click', () => {
+          carousel.scrollTo({ left: cards[i].offsetLeft - (carousel.offsetWidth - cards[i].offsetWidth) / 2, behavior: 'smooth' });
+        });
+      });
+
+      cards.forEach((c,i) => {
+        c.addEventListener('click', () => {
+          if (i !== current) carousel.scrollTo({ left: c.offsetLeft - (carousel.offsetWidth - c.offsetWidth) / 2, behavior: 'smooth' });
+        });
+      });
+    })();
+  </script>
+
+</body>
+</html>
