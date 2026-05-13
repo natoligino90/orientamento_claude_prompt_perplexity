@@ -38,6 +38,20 @@
     .esp-dot { width: 6px; height: 6px; border-radius: 50%; background: rgba(196,98,45,.25); transition: background .3s, transform .3s; cursor: pointer; }
     .esp-dot.active { background: var(--t); transform: scale(1.3); }
     .esp-note { margin-top: 20px; font-size: .74rem; color: var(--text-l); font-style: italic; padding: 0 20px; }
+
+    /* CHI SIAMO */
+    .chi-siamo { background: #FDFAF6; padding: 72px 0 64px; border-bottom: 1px solid rgba(196,98,45,.08); }
+    .chi-siamo-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; }
+    .chi-siamo-text p { font-size: .95rem; color: var(--text-l); line-height: 1.8; margin-bottom: 16px; }
+    .chi-siamo-text p:last-child { margin-bottom: 0; }
+    .chi-siamo-firma { margin-top: 28px; padding-top: 20px; border-top: 1px solid rgba(196,98,45,.12); font-size: .82rem; color: var(--text-l); }
+    .chi-siamo-firma strong { color: var(--brown); display: block; font-size: .9rem; margin-bottom: 3px; }
+    @media (max-width: 768px) { .chi-siamo-inner { grid-template-columns: 1fr; gap: 32px; } }
+
+    /* DEST CTA overlay button */
+    .dest-wa-cta { display:inline-flex; align-items:center; gap:6px; margin-top:10px; padding:7px 14px; background:rgba(255,255,255,.15); border:1px solid rgba(255,255,255,.35); border-radius:20px; color:#fff; font-size:.74rem; font-weight:500; text-decoration:none; transition:background .2s; }
+    .dest-wa-cta:hover { background:rgba(255,255,255,.28); }
+    .dest-wa-cta svg { flex-shrink:0; }
   </style>
 </head>
 <body>
@@ -57,6 +71,7 @@
       <li><a href="#come-funziona">Come funziona</a></li>
       <li><a href="#cosa-facciamo">Il servizio</a></li>
       <li><a href="#destinazioni">Destinazioni</a></li>
+      <li><a href="#chi-siamo">Chi siamo</a></li>
       <li><a href="#faq">FAQ</a></li>
     </ul>
     <a class="nav-cta" href="https://wa.me/+393205532756" target="_blank" rel="noopener noreferrer">
@@ -71,13 +86,16 @@
       <div class="hero-logo-wrap" aria-hidden="true">
         <img src="assets/favicon.png" alt="" />
       </div>
-      <div class="hero-badge">Servizio gratuito di orientamento informativo</div>
-      <h1 id="hero-title">Scopri la Sicilia<br>con la tua <em>famiglia</em></h1>
+      <div class="hero-badge">Orientamento gratuito per famiglie</div>
+      <h1 id="hero-title">La Sicilia con i bambini<br>non si <em>improvvisa.</em></h1>
       <p class="hero-sub">
-        Ti aiutiamo a capire quali zone e quali soluzioni possono essere
-        piu adatte alla tua famiglia - senza costi, senza impegni.
+        Troppe zone, troppe opzioni, troppa paura di sbagliare.<br>
+        Ti aiutiamo a trovare la tua — gratis, senza impegni, senza fretta.
       </p>
-          
+      <a class="btn-wa" href="https://wa.me/+393205532756" target="_blank" rel="noopener noreferrer" style="margin-top:28px">
+        <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M20.52 3.48A11.93 11.93 0 0 0 12 0C5.37 0 0 5.37 0 12c0 2.11.55 4.16 1.6 5.97L0 24l6.22-1.63A11.94 11.94 0 0 0 12 24c6.63 0 12-5.37 12-12 0-3.2-1.25-6.21-3.48-8.52zM12 22c-1.85 0-3.65-.5-5.22-1.44l-.37-.22-3.86 1.01 1.03-3.74-.24-.38A9.94 9.94 0 0 1 2 12C2 6.48 6.48 2 12 2c2.67 0 5.18 1.04 7.07 2.93A9.93 9.93 0 0 1 22 12c0 5.52-4.48 10-10 10zm5.44-7.6c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15s-.77.96-.94 1.16c-.17.2-.35.22-.65.07A8.22 8.22 0 0 1 9.6 13.1c-.42-.72-.7-1.52-.78-2.35-.08-.82.18-1.6.72-2.19.19-.2.38-.39.6-.54.22-.15.3-.09.44.06.14.15.6.73.73.88.13.15.13.28 0 .43-.13.15-.3.35-.43.53-.13.18-.1.37.02.54.43.59.96 1.1 1.57 1.51.61.41 1.28.7 1.98.87.2.05.37.02.5-.1.13-.12.57-.66.72-.88.15-.22.3-.18.5-.11.2.07 1.72.81 2.02.96.3.15.5.22.57.35.07.13.07.76-.22 1.06z"/></svg>
+        Raccontaci la tua famiglia
+      </a>
     </div>
   </section>
 <section class="trasparenza-mini" aria-label="Nota trasparenza">
@@ -89,6 +107,50 @@
 </a>
   </div>
 </section>
+
+  <!-- CHI SIAMO -->
+  <section class="chi-siamo" id="chi-siamo" aria-labelledby="chi-siamo-title">
+    <div class="container">
+      <span class="section-tag reveal">Chi siamo</span>
+      <h2 class="section-title reveal" id="chi-siamo-title">Una voce reale,<br>non un <em>algoritmo</em></h2>
+      <div class="divider reveal" aria-hidden="true"></div>
+      <div class="chi-siamo-inner">
+        <div class="chi-siamo-text">
+          <p class="reveal">
+            Mi chiamo Gino Natoli. Lavoro nel turismo da oltre 10 anni e la Sicilia la conosco davvero —
+            non dai depliant, ma dai parcheggi impossibili di Ortigia, dalla spiaggia giusta a San Vito
+            prima delle 10:30, dai sentieri dello Zingaro con bambini nel marsupio, dagli orari del
+            mercato di Catania che cambiano tutto con i piccoli al seguito.
+          </p>
+          <p class="reveal">
+            Ho creato Sicilia in Famiglia per aiutare le famiglie a scegliere senza perdersi.
+            Non vendo nulla. Ti ascolto, ti oriento e, se vuoi andare avanti, ti metto in contatto
+            con il tour operator più adatto per la tua destinazione.
+            Il servizio è completamente gratuito.
+          </p>
+          <div class="chi-siamo-firma reveal">
+            <strong>Gino Natoli</strong>
+            Fondatore, Sicilia in Famiglia
+          </div>
+        </div>
+        <div class="reveal" style="display:flex;flex-direction:column;gap:16px">
+          <div style="background:rgba(196,98,45,.05);border:1px solid rgba(196,98,45,.1);border-radius:14px;padding:24px">
+            <div style="font-size:1.8rem;font-weight:600;color:var(--t);line-height:1">10+</div>
+            <div style="font-size:.8rem;color:var(--text-l);margin-top:4px">anni nel settore turistico</div>
+          </div>
+          <div style="background:rgba(196,98,45,.05);border:1px solid rgba(196,98,45,.1);border-radius:14px;padding:24px">
+            <div style="font-size:1.8rem;font-weight:600;color:var(--t);line-height:1">Gratis</div>
+            <div style="font-size:.8rem;color:var(--text-l);margin-top:4px">nessun costo, nessun impegno</div>
+          </div>
+          <div style="background:rgba(196,98,45,.05);border:1px solid rgba(196,98,45,.1);border-radius:14px;padding:24px">
+            <div style="font-size:1.8rem;font-weight:600;color:var(--t);line-height:1">Umano</div>
+            <div style="font-size:.8rem;color:var(--text-l);margin-top:4px">rispondi a una persona reale</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- COSA FACCIAMO -->
   <section class="facciamo" id="cosa-facciamo" aria-labelledby="facciamo-title">
     <div class="container">
@@ -158,8 +220,8 @@
   <section class="esperienze" id="esperienze" aria-labelledby="esp-title">
     <div class="container" style="padding-bottom:16px; padding-left:20px; padding-right:20px;">
       <span class="section-tag reveal">Esperienze testate</span>
-      <h2 class="section-title reveal" id="esp-title">Ci siamo stati - scarica gratis la guida</h2>
-      <p class="section-lead reveal">Guide PDF gratuite scritte con occhi da famiglia. Scorri -> Scarica, leggi, parti.</p>
+      <h2 class="section-title reveal" id="esp-title">Le guide che abbiamo scritto per te</h2>
+      <p class="section-lead reveal">PDF gratuiti con occhi da famiglia. Orari reali, consigli pratici, cose che online non si trovano. Scorri e richiedi quella che ti serve.</p>
     </div>
     <div class="esp-carousel-wrap container">
       <div class="esp-carousel" id="espCarousel">
@@ -168,7 +230,7 @@
           <div class="esp-card-body">
             <span class="esp-zona">Mar Tirreno</span>
             <h3>Cefalù</h3>
-            <p>Borgo medievale, spiaggia e duomo normanno.</p>
+            <p>Spiaggia comoda, borgo a piedi, ritmo giusto per i bambini piccoli. La guida ti dice quando andare e dove stare.</p>
             <span class="esp-free">PDF Gratis</span>
             <a class="esp-download" href="https://wa.me/+393205532756" target="_blank" rel="noopener noreferrer">
   <svg viewBox="0 0 24 24" fill="currentColor" width="12" height="12"><path d="M20.52 3.48A11.93 11.93 0 0 0 12 0C5.37 0 0 5.37 0 12c0 2.11.55 4.16 1.6 5.97L0 24l6.22-1.63A11.94 11.94 0 0 0 12 24c6.63 0 12-5.37 12-12 0-3.2-1.25-6.21-3.48-8.52z"/></svg>
@@ -181,7 +243,7 @@
           <div class="esp-card-body">
             <span class="esp-zona">Messina</span>
             <h3>Taormina</h3>
-            <p>Teatro greco, vista sull'Etna, mare cristallino.</p>
+            <p>Teatro antico, Isola Bella e orari che cambiano tutto con bambini al seguito. La guida ti evita le salite sbagliate.</p>
             <span class="esp-free">PDF Gratis</span>
             <a class="esp-download" href="https://wa.me/+393205532756" target="_blank" rel="noopener noreferrer">
   <svg viewBox="0 0 24 24" fill="currentColor" width="12" height="12"><path d="M20.52 3.48A11.93 11.93 0 0 0 12 0C5.37 0 0 5.37 0 12c0 2.11.55 4.16 1.6 5.97L0 24l6.22-1.63A11.94 11.94 0 0 0 12 24c6.63 0 12-5.37 12-12 0-3.2-1.25-6.21-3.48-8.52z"/></svg>
@@ -194,7 +256,7 @@
           <div class="esp-card-body">
             <span class="esp-zona">Catania</span>
             <h3>Etna</h3>
-            <p>Il vulcano piu alto d'Europa, per tutte le eta.</p>
+            <p>A che quota andare, cosa preparare, quanto regge un bambino di 5 anni. Il vulcano si fa benissimo in famiglia — se sai come.</p>
             <span class="esp-free">PDF Gratis</span>
             <a class="esp-download" href="https://wa.me/+393205532756" target="_blank" rel="noopener noreferrer">
   <svg viewBox="0 0 24 24" fill="currentColor" width="12" height="12"><path d="M20.52 3.48A11.93 11.93 0 0 0 12 0C5.37 0 0 5.37 0 12c0 2.11.55 4.16 1.6 5.97L0 24l6.22-1.63A11.94 11.94 0 0 0 12 24c6.63 0 12-5.37 12-12 0-3.2-1.25-6.21-3.48-8.52z"/></svg>
@@ -207,7 +269,7 @@
           <div class="esp-card-body">
             <span class="esp-zona">Arcipelago</span>
             <h3>Isole Eolie</h3>
-            <p>Mari turchesi e natura vulcanica unica.</p>
+            <p>Quali isole scegliere, traghetti, logistica: tutto quello che nessuno dice quando ci si va con bambini piccoli.</p>
             <span class="esp-free">PDF Gratis</span>
             <a class="esp-download" href="https://wa.me/+393205532756" target="_blank" rel="noopener noreferrer">
   <svg viewBox="0 0 24 24" fill="currentColor" width="12" height="12"><path d="M20.52 3.48A11.93 11.93 0 0 0 12 0C5.37 0 0 5.37 0 12c0 2.11.55 4.16 1.6 5.97L0 24l6.22-1.63A11.94 11.94 0 0 0 12 24c6.63 0 12-5.37 12-12 0-3.2-1.25-6.21-3.48-8.52z"/></svg>
@@ -220,7 +282,7 @@
           <div class="esp-card-body">
             <span class="esp-zona">Agrigento</span>
             <h3>Valle dei Templi</h3>
-            <p>UNESCO, storia greca e spiagge vicine.</p>
+            <p>Il parco UNESCO non è solo per adulti. La guida ti mostra come viverlo in famiglia senza stancare i bambini.</p>
             <span class="esp-free">PDF Gratis</span>
             <a class="esp-download" href="https://wa.me/+393205532756" target="_blank" rel="noopener noreferrer">
   <svg viewBox="0 0 24 24" fill="currentColor" width="12" height="12"><path d="M20.52 3.48A11.93 11.93 0 0 0 12 0C5.37 0 0 5.37 0 12c0 2.11.55 4.16 1.6 5.97L0 24l6.22-1.63A11.94 11.94 0 0 0 12 24c6.63 0 12-5.37 12-12 0-3.2-1.25-6.21-3.48-8.52z"/></svg>
@@ -233,7 +295,7 @@
           <div class="esp-card-body">
             <span class="esp-zona">Trapanese</span>
             <h3>Riserva Zingaro</h3>
-            <p>Calette nascoste e acque da togliere il fiato.</p>
+            <p>Calette, sentieri e acque incredibili. La guida per chi ci viene con bambini nel marsupio o in età da trekking.</p>
             <span class="esp-free">PDF Gratis</span>
             <a class="esp-download" href="https://wa.me/+393205532756" target="_blank" rel="noopener noreferrer">
   <svg viewBox="0 0 24 24" fill="currentColor" width="12" height="12"><path d="M20.52 3.48A11.93 11.93 0 0 0 12 0C5.37 0 0 5.37 0 12c0 2.11.55 4.16 1.6 5.97L0 24l6.22-1.63A11.94 11.94 0 0 0 12 24c6.63 0 12-5.37 12-12 0-3.2-1.25-6.21-3.48-8.52z"/></svg>
@@ -264,16 +326,16 @@
       <div class="divider reveal" aria-hidden="true"></div>
       <p class="section-lead reveal">Un assaggio editoriale delle aree che le famiglie trovano piu interessanti. Scrivici per capire quale fa per voi.</p>
       <div class="dest-grid">
-        <article class="dest-card reveal"><img src="images/agrigento.jpg" alt="Agrigento" loading="lazy" /><div class="dest-overlay" aria-hidden="true"></div><div class="dest-info"><span class="dest-tag">Agrigento</span><h3>Agrigento</h3><p>Valle dei Templi e spiagge dorate.</p></div></article>
-        <article class="dest-card reveal"><img src="images/catania.jpg" alt="Catania" loading="lazy" /><div class="dest-overlay" aria-hidden="true"></div><div class="dest-info"><span class="dest-tag">Etna e Citta</span><h3>Catania</h3><p>Barocco e vulcano a portata di mano.</p></div></article>
-        <article class="dest-card reveal"><img src="images/cefalu.jpg" alt="Cefalu" loading="lazy" /><div class="dest-overlay" aria-hidden="true"></div><div class="dest-info"><span class="dest-tag">Mar Tirreno</span><h3>Cefalu</h3><p>Borgo medievale e spiagge raccolte.</p></div></article>
-        <article class="dest-card reveal"><img src="images/isole-eolie.jpg" alt="Isole Eolie" loading="lazy" /><div class="dest-overlay" aria-hidden="true"></div><div class="dest-info"><span class="dest-tag">Arcipelago</span><h3>Isole Eolie</h3><p>Mare e natura vulcanica unica.</p></div></article>
-        <article class="dest-card reveal"><img src="images/palermo.jpg" alt="Palermo" loading="lazy" /><div class="dest-overlay" aria-hidden="true"></div><div class="dest-info"><span class="dest-tag">Capitale</span><h3>Palermo</h3><p>Arte, mercati e sapori autentici.</p></div></article>
-        <article class="dest-card reveal"><img src="images/ragusa.jpg" alt="Ragusa" loading="lazy" /><div class="dest-overlay" aria-hidden="true"></div><div class="dest-info"><span class="dest-tag">Val di Noto</span><h3>Ragusa</h3><p>Ibla barocca e campagna sicula.</p></div></article>
-        <article class="dest-card reveal"><img src="images/san-vito-lo-capo.jpg" alt="San Vito Lo Capo" loading="lazy" /><div class="dest-overlay" aria-hidden="true"></div><div class="dest-info"><span class="dest-tag">Trapanese</span><h3>San Vito Lo Capo</h3><p>Spiaggia bianca tra le piu belle d'Italia.</p></div></article>
-        <article class="dest-card reveal"><img src="images/siracusa.jpg" alt="Siracusa" loading="lazy" /><div class="dest-overlay" aria-hidden="true"></div><div class="dest-info"><span class="dest-tag">Orientale</span><h3>Siracusa</h3><p>Ortigia, storia greca e mare limpido.</p></div></article>
-        <article class="dest-card reveal"><img src="images/taormina.jpg" alt="Taormina" loading="lazy" /><div class="dest-overlay" aria-hidden="true"></div><div class="dest-info"><span class="dest-tag">Messina</span><h3>Taormina</h3><p>Teatro greco e panorami sull'Etna.</p></div></article>
-        <article class="dest-card reveal"><img src="images/trapani.jpg" alt="Trapani" loading="lazy" /><div class="dest-overlay" aria-hidden="true"></div><div class="dest-info"><span class="dest-tag">Occidentale</span><h3>Trapani</h3><p>Saline, Erice e le isole Egadi.</p></div></article>
+        <article class="dest-card reveal"><img src="images/agrigento.jpg" alt="Agrigento" loading="lazy" /><div class="dest-overlay" aria-hidden="true"></div><div class="dest-info"><span class="dest-tag">Agrigento</span><h3>Agrigento</h3><p>Valle dei Templi e spiagge dorate.</p><a class="dest-wa-cta" href="https://wa.me/+393205532756?text=Ciao%2C%20mi%20interessa%20la%20zona%20di%20Agrigento%20con%20la%20famiglia.%20Posso%20avere%20qualche%20info%3F" target="_blank" rel="noopener noreferrer"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.52 3.48A11.93 11.93 0 0 0 12 0C5.37 0 0 5.37 0 12c0 2.11.55 4.16 1.6 5.97L0 24l6.22-1.63A11.94 11.94 0 0 0 12 24c6.63 0 12-5.37 12-12 0-3.2-1.25-6.21-3.48-8.52z"/></svg> Chiedici di Agrigento</a></div></article>
+        <article class="dest-card reveal"><img src="images/catania.jpg" alt="Catania" loading="lazy" /><div class="dest-overlay" aria-hidden="true"></div><div class="dest-info"><span class="dest-tag">Etna e Città</span><h3>Catania</h3><p>Barocco e vulcano a portata di mano.</p><a class="dest-wa-cta" href="https://wa.me/+393205532756?text=Ciao%2C%20mi%20interessa%20la%20zona%20di%20Catania%20ed%20Etna%20con%20la%20famiglia.%20Posso%20avere%20qualche%20info%3F" target="_blank" rel="noopener noreferrer"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.52 3.48A11.93 11.93 0 0 0 12 0C5.37 0 0 5.37 0 12c0 2.11.55 4.16 1.6 5.97L0 24l6.22-1.63A11.94 11.94 0 0 0 12 24c6.63 0 12-5.37 12-12 0-3.2-1.25-6.21-3.48-8.52z"/></svg> Chiedici di Catania</a></div></article>
+        <article class="dest-card reveal"><img src="images/cefalu.jpg" alt="Cefalu" loading="lazy" /><div class="dest-overlay" aria-hidden="true"></div><div class="dest-info"><span class="dest-tag">Mar Tirreno</span><h3>Cefalù</h3><p>Borgo medievale e spiagge raccolte.</p><a class="dest-wa-cta" href="https://wa.me/+393205532756?text=Ciao%2C%20mi%20interessa%20Cefal%C3%B9%20con%20la%20famiglia.%20Posso%20avere%20qualche%20info%3F" target="_blank" rel="noopener noreferrer"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.52 3.48A11.93 11.93 0 0 0 12 0C5.37 0 0 5.37 0 12c0 2.11.55 4.16 1.6 5.97L0 24l6.22-1.63A11.94 11.94 0 0 0 12 24c6.63 0 12-5.37 12-12 0-3.2-1.25-6.21-3.48-8.52z"/></svg> Chiedici di Cefalù</a></div></article>
+        <article class="dest-card reveal"><img src="images/isole-eolie.jpg" alt="Isole Eolie" loading="lazy" /><div class="dest-overlay" aria-hidden="true"></div><div class="dest-info"><span class="dest-tag">Arcipelago</span><h3>Isole Eolie</h3><p>Mare e natura vulcanica unica.</p><a class="dest-wa-cta" href="https://wa.me/+393205532756?text=Ciao%2C%20mi%20interessano%20le%20Isole%20Eolie%20con%20la%20famiglia.%20Posso%20avere%20qualche%20info%3F" target="_blank" rel="noopener noreferrer"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.52 3.48A11.93 11.93 0 0 0 12 0C5.37 0 0 5.37 0 12c0 2.11.55 4.16 1.6 5.97L0 24l6.22-1.63A11.94 11.94 0 0 0 12 24c6.63 0 12-5.37 12-12 0-3.2-1.25-6.21-3.48-8.52z"/></svg> Chiedici delle Eolie</a></div></article>
+        <article class="dest-card reveal"><img src="images/palermo.jpg" alt="Palermo" loading="lazy" /><div class="dest-overlay" aria-hidden="true"></div><div class="dest-info"><span class="dest-tag">Capitale</span><h3>Palermo</h3><p>Arte, mercati e sapori autentici.</p><a class="dest-wa-cta" href="https://wa.me/+393205532756?text=Ciao%2C%20mi%20interessa%20Palermo%20con%20la%20famiglia.%20Posso%20avere%20qualche%20info%3F" target="_blank" rel="noopener noreferrer"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.52 3.48A11.93 11.93 0 0 0 12 0C5.37 0 0 5.37 0 12c0 2.11.55 4.16 1.6 5.97L0 24l6.22-1.63A11.94 11.94 0 0 0 12 24c6.63 0 12-5.37 12-12 0-3.2-1.25-6.21-3.48-8.52z"/></svg> Chiedici di Palermo</a></div></article>
+        <article class="dest-card reveal"><img src="images/ragusa.jpg" alt="Ragusa" loading="lazy" /><div class="dest-overlay" aria-hidden="true"></div><div class="dest-info"><span class="dest-tag">Val di Noto</span><h3>Ragusa</h3><p>Ibla barocca e campagna sicula.</p><a class="dest-wa-cta" href="https://wa.me/+393205532756?text=Ciao%2C%20mi%20interessa%20Ragusa%20e%20la%20zona%20con%20la%20famiglia.%20Posso%20avere%20qualche%20info%3F" target="_blank" rel="noopener noreferrer"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.52 3.48A11.93 11.93 0 0 0 12 0C5.37 0 0 5.37 0 12c0 2.11.55 4.16 1.6 5.97L0 24l6.22-1.63A11.94 11.94 0 0 0 12 24c6.63 0 12-5.37 12-12 0-3.2-1.25-6.21-3.48-8.52z"/></svg> Chiedici di Ragusa</a></div></article>
+        <article class="dest-card reveal"><img src="images/san-vito-lo-capo.jpg" alt="San Vito Lo Capo" loading="lazy" /><div class="dest-overlay" aria-hidden="true"></div><div class="dest-info"><span class="dest-tag">Trapanese</span><h3>San Vito Lo Capo</h3><p>Spiaggia bianca tra le più belle d'Italia.</p><a class="dest-wa-cta" href="https://wa.me/+393205532756?text=Ciao%2C%20mi%20interessa%20San%20Vito%20Lo%20Capo%20con%20la%20famiglia.%20Posso%20avere%20qualche%20info%3F" target="_blank" rel="noopener noreferrer"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.52 3.48A11.93 11.93 0 0 0 12 0C5.37 0 0 5.37 0 12c0 2.11.55 4.16 1.6 5.97L0 24l6.22-1.63A11.94 11.94 0 0 0 12 24c6.63 0 12-5.37 12-12 0-3.2-1.25-6.21-3.48-8.52z"/></svg> Chiedici di San Vito</a></div></article>
+        <article class="dest-card reveal"><img src="images/siracusa.jpg" alt="Siracusa" loading="lazy" /><div class="dest-overlay" aria-hidden="true"></div><div class="dest-info"><span class="dest-tag">Orientale</span><h3>Siracusa</h3><p>Ortigia, storia greca e mare limpido.</p><a class="dest-wa-cta" href="https://wa.me/+393205532756?text=Ciao%2C%20mi%20interessa%20Siracusa%20con%20la%20famiglia.%20Posso%20avere%20qualche%20info%3F" target="_blank" rel="noopener noreferrer"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.52 3.48A11.93 11.93 0 0 0 12 0C5.37 0 0 5.37 0 12c0 2.11.55 4.16 1.6 5.97L0 24l6.22-1.63A11.94 11.94 0 0 0 12 24c6.63 0 12-5.37 12-12 0-3.2-1.25-6.21-3.48-8.52z"/></svg> Chiedici di Siracusa</a></div></article>
+        <article class="dest-card reveal"><img src="images/taormina.jpg" alt="Taormina" loading="lazy" /><div class="dest-overlay" aria-hidden="true"></div><div class="dest-info"><span class="dest-tag">Messina</span><h3>Taormina</h3><p>Teatro greco e panorami sull'Etna.</p><a class="dest-wa-cta" href="https://wa.me/+393205532756?text=Ciao%2C%20mi%20interessa%20Taormina%20con%20la%20famiglia.%20Posso%20avere%20qualche%20info%3F" target="_blank" rel="noopener noreferrer"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.52 3.48A11.93 11.93 0 0 0 12 0C5.37 0 0 5.37 0 12c0 2.11.55 4.16 1.6 5.97L0 24l6.22-1.63A11.94 11.94 0 0 0 12 24c6.63 0 12-5.37 12-12 0-3.2-1.25-6.21-3.48-8.52z"/></svg> Chiedici di Taormina</a></div></article>
+        <article class="dest-card reveal"><img src="images/trapani.jpg" alt="Trapani" loading="lazy" /><div class="dest-overlay" aria-hidden="true"></div><div class="dest-info"><span class="dest-tag">Occidentale</span><h3>Trapani</h3><p>Saline, Erice e le isole Egadi.</p><a class="dest-wa-cta" href="https://wa.me/+393205532756?text=Ciao%2C%20mi%20interessa%20la%20zona%20di%20Trapani%20con%20la%20famiglia.%20Posso%20avere%20qualche%20info%3F" target="_blank" rel="noopener noreferrer"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.52 3.48A11.93 11.93 0 0 0 12 0C5.37 0 0 5.37 0 12c0 2.11.55 4.16 1.6 5.97L0 24l6.22-1.63A11.94 11.94 0 0 0 12 24c6.63 0 12-5.37 12-12 0-3.2-1.25-6.21-3.48-8.52z"/></svg> Chiedici di Trapani</a></div></article>
       </div>
       <p class="dest-note reveal">Destinazioni presentate a titolo puramente informativo e ispirazionale. Nessun prezzo o disponibilita e indicato.</p>
       <div style="text-align:center">
@@ -314,26 +376,6 @@
     </div>
   </section>
 
-  <!-- COSA NON FACCIAMO -->
-  <section class="non-facciamo" aria-labelledby="nonfacciamo-title">
-    <div class="container">
-      <span class="section-tag reveal">Trasparenza e chiarezza</span>
-      <h2 class="section-title reveal" id="nonfacciamo-title">Cosa <em style="font-family:'Cormorant Garamond',serif;font-style:italic">non</em> facciamo</h2>
-      <div class="divider reveal" aria-hidden="true"></div>
-      <p class="section-lead reveal">Riteniamo fondamentale essere chiari su cio che il servizio non comprende e non puo offrire.</p>
-      <div class="non-grid">
-        <article class="non-card reveal"><div class="x-icon"><svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></div><h4>Non siamo un'agenzia di viaggi</h4><p>Offriamo esclusivamente orientamento informativo iniziale.</p></article>
-        <article class="non-card reveal"><div class="x-icon"><svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></div><h4>Non incassiamo pagamenti</h4><p>I pagamenti sono a cura del tour operator per la destinazione scelta.</p></article>
-        <article class="non-card reveal"><div class="x-icon"><svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></div><h4>Non emettiamo contratti</h4><p>Conferme e documenti sono competenza del tour operator di riferimento.</p></article>
-        <article class="non-card reveal"><div class="x-icon"><svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></div><h4>Non rispondiamo dei servizi</h4><p>Garanzie e coperture sono responsabilita del tour operator che gestisce la prenotazione.</p></article>
-        <article class="non-card reveal"><div class="x-icon"><svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></div><h4>Non sostituiamo il tour operator</h4><p>Il rapporto contrattuale e esclusivamente tra la famiglia e il tour operator di riferimento.</p></article>
-      </div>
-      <div class="non-note reveal" role="note">
-        <strong>In sintesi:</strong> offriamo esclusivamente orientamento informativo iniziale. Se desideri procedere, ti metteremo in contatto con <strong>il tour operator piu adatto per la destinazione che scegli</strong>.
-      </div>
-    </div>
-  </section>
-
   <!-- INTERMEZZO -->
   <section class="intermezzo" aria-label="Invito al contatto">
     <div class="intermezzo-bg" role="presentation" aria-hidden="true"></div>
@@ -352,33 +394,45 @@
   <section class="faq" id="faq" aria-labelledby="faq-title">
     <div class="container">
       <span class="section-tag reveal">Domande frequenti</span>
-      <h2 class="section-title reveal" id="faq-title">Trasparenza su chi siamo<br>e cosa offriamo</h2>
-      <p class="section-lead reveal" style="margin-bottom:0">Risposte chiare sul funzionamento del servizio.</p>
+      <h2 class="section-title reveal" id="faq-title">Domande reali<br>su viaggio e servizio</h2>
+      <p class="section-lead reveal" style="margin-bottom:0">Quello che le famiglie ci chiedono più spesso — sulla Sicilia e su come funzioniamo.</p>
       <div class="faq-list reveal" role="list">
+
         <div class="faq-item" role="listitem">
-          <button class="faq-q" aria-expanded="false" aria-controls="faq-a1" id="faq-q1">Chi gestisce la prenotazione?<svg class="chevron" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button>
-          <div class="faq-a" id="faq-a1" role="region" aria-labelledby="faq-q1">L'eventuale formalizzazione e gestita esclusivamente dal <strong>tour operator di riferimento per la destinazione scelta</strong>. Sicilia in Famiglia non effettua prenotazioni e non emette alcuna conferma.</div>
+          <button class="faq-q" aria-expanded="false" aria-controls="faq-a1" id="faq-q1">Agosto è troppo caldo per portare i bambini in Sicilia?<svg class="chevron" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-a" id="faq-a1" role="region" aria-labelledby="faq-q1">Dipende da come lo si organizza. Agosto è il mese più caldo ma anche il più frequentato — non è impossibile, ma richiede accortezza. Le spiagge vanno vissute la mattina presto e nel tardo pomeriggio. I centri storici si visitano bene dalle 9 alle 11:30, poi si pausa. Con bambini piccoli sotto i 3 anni, giugno e settembre sono molto più comodi. Per famiglie con bambini più grandi, agosto funziona se si pianifica bene.</div>
         </div>
+
         <div class="faq-item" role="listitem">
-          <button class="faq-q" aria-expanded="false" aria-controls="faq-a2" id="faq-q2">Chi incassa il pagamento?<svg class="chevron" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button>
-          <div class="faq-a" id="faq-a2" role="region" aria-labelledby="faq-q2">Nessuna somma viene raccolta da Sicilia in Famiglia. Il pagamento e gestito dal <strong>tour operator di riferimento per la destinazione scelta</strong>.</div>
+          <button class="faq-q" aria-expanded="false" aria-controls="faq-a2" id="faq-q2">Meglio il nord o il sud della Sicilia per una famiglia con bambini piccoli?<svg class="chevron" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-a" id="faq-a2" role="region" aria-labelledby="faq-q2">Non esiste una risposta unica — dipende da cosa cercate. Il nord (Cefalù, San Vito Lo Capo) ha spiagge più comode, borghi a misura di passeggino, ritmi più rilassati. Il sud-est (Ragusa, Modica, Siracusa) offre paesaggi barocchi incredibili ma con più salite e superfici sconnesse. Il sud-ovest (Agrigento, Valle dei Templi) è potente culturalmente. Scrivici e ti aiutiamo a capire quale zona fa per la composizione della vostra famiglia.</div>
         </div>
+
         <div class="faq-item" role="listitem">
-          <button class="faq-q" aria-expanded="false" aria-controls="faq-a3" id="faq-q3">Con chi concludo il contratto?<svg class="chevron" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button>
-          <div class="faq-a" id="faq-a3" role="region" aria-labelledby="faq-q3">Il contratto viene concluso con il <strong>tour operator di riferimento per la destinazione scelta</strong>, soggetto giuridicamente responsabile che fornisce tutte le condizioni e le garanzie previste dalla normativa.</div>
+          <button class="faq-q" aria-expanded="false" aria-controls="faq-a3" id="faq-q3">Le Isole Eolie sono adatte a bambini molto piccoli?<svg class="chevron" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-a" id="faq-a3" role="region" aria-labelledby="faq-q3">Con bambini sotto i 4 anni le Eolie possono diventare logisticamente impegnative: traghetti, scale, salite, pochissimi passeggini. Lipari è la più attrezzata. Salina è più tranquilla ma richiede spostamenti in auto. Stromboli e Vulcano sono meno adatte ai piccoli. Con bambini dai 5-6 anni in su l'esperienza è bellissima. Per bambini più piccoli, Cefalù o San Vito Lo Capo garantiscono più serenità.</div>
         </div>
+
         <div class="faq-item" role="listitem">
-          <button class="faq-q" aria-expanded="false" aria-controls="faq-a4" id="faq-q4">Sicilia in Famiglia e un'agenzia di viaggi?<svg class="chevron" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button>
-          <div class="faq-a" id="faq-a4" role="region" aria-labelledby="faq-q4">No. <strong>Sicilia in Famiglia non e un'agenzia di viaggi ne un tour operator.</strong> Il servizio consiste esclusivamente in orientamento e segnalazione informativa a titolo gratuito.</div>
+          <button class="faq-q" aria-expanded="false" aria-controls="faq-a4" id="faq-q4">Cefalù o San Vito Lo Capo: quale scegliere per una settimana in famiglia?<svg class="chevron" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-a" id="faq-a4" role="region" aria-labelledby="faq-q4">Sono due esperienze diverse. Cefalù ha un borgo medievale vivo, una spiaggia comoda nel centro del paese, servizi a portata di mano — è più adatta a chi vuole alternare mare e cultura. San Vito Lo Capo ha una delle spiagge più belle d'Italia, un paese tranquillo, meno da "visitare" ma più da vivere. Con bambini piccoli entrambe funzionano bene — dipende se volete più relax o più vivacità. Scrivici e vi aiutiamo a scegliere.</div>
         </div>
+
         <div class="faq-item" role="listitem">
           <button class="faq-q" aria-expanded="false" aria-controls="faq-a5" id="faq-q5">Il servizio ha un costo?<svg class="chevron" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button>
-          <div class="faq-a" id="faq-a5" role="region" aria-labelledby="faq-q5"><strong>Il servizio di orientamento informativo e completamente gratuito.</strong> Non sono previsti costi, commissioni o compensi di alcun tipo.</div>
+          <div class="faq-a" id="faq-a5" role="region" aria-labelledby="faq-q5"><strong>Il servizio di orientamento è completamente gratuito.</strong> Non sono previsti costi, commissioni o compensi di alcun tipo da parte vostra. Se deciderete di procedere con una prenotazione, il rapporto contrattuale ed economico sarà esclusivamente con il tour operator di riferimento.</div>
         </div>
+
         <div class="faq-item" role="listitem">
-          <button class="faq-q" aria-expanded="false" aria-controls="faq-a6" id="faq-q6">Chi fornisce le condizioni economiche e le garanzie?<svg class="chevron" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button>
-          <div class="faq-a" id="faq-a6" role="region" aria-labelledby="faq-q6">Tutte le condizioni contrattuali, le garanzie e le coperture assicurative sono fornite dal <strong>tour operator di riferimento per la destinazione scelta</strong>.</div>
+          <button class="faq-q" aria-expanded="false" aria-controls="faq-a6" id="faq-q6">Sicilia in Famiglia è un'agenzia di viaggi?<svg class="chevron" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-a" id="faq-a6" role="region" aria-labelledby="faq-q6">No. <strong>Sicilia in Famiglia non è un'agenzia di viaggi né un tour operator.</strong> Offriamo esclusivamente un servizio gratuito di orientamento informativo. Se decidete di procedere, vi mettiamo in contatto con il tour operator di riferimento, che gestirà prenotazione, contratto, pagamento e garanzie.</div>
         </div>
+
+        <div class="faq-item" role="listitem">
+          <button class="faq-q" aria-expanded="false" aria-controls="faq-a7" id="faq-q7">Chi gestisce la prenotazione e i pagamenti?<svg class="chevron" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-a" id="faq-a7" role="region" aria-labelledby="faq-q7">Prenotazione, contratto, pagamento e garanzie sono gestiti <strong>esclusivamente dal tour operator di riferimento per la destinazione scelta</strong>. Sicilia in Famiglia non incassa somme e non emette conferme di prenotazione. Il rapporto contrattuale è direttamente tra voi e il tour operator.</div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -437,10 +491,11 @@
       <div class="footer-disc" role="note">
         <strong>Informativa legale</strong><br><br>
         Sicilia in Famiglia offre esclusivamente un servizio gratuito di orientamento informativo.
-        <strong>Non e un'agenzia di viaggi e non vende pacchetti turistici.</strong>
+        <strong>Non è un'agenzia di viaggi e non vende pacchetti turistici.</strong>
         Non incassa somme, non emette conferme di prenotazione e non gestisce rapporti contrattuali.<br><br>
         Contratto, pagamento, condizioni generali e garanzie sono gestiti
-        <strong>esclusivamente dal tour operator di riferimento per la destinazione scelta</strong>.
+        <strong>esclusivamente dal tour operator di riferimento per la destinazione scelta</strong>.<br><br>
+        <strong>Titolare del sito:</strong> Gino Natoli — siciliainfamiglia@outlook.it
       </div>
       <div class="footer-bottom">
         <span>© <span id="year"></span> Sicilia in Famiglia. Tutti i diritti riservati.</span>
