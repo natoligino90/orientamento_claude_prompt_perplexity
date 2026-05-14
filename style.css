@@ -390,3 +390,32 @@ footer { background: var(--brown); color: rgba(255,255,255,.55); padding: 20px 2
   .non-grid  { grid-template-columns: 1fr; }
   .dest-grid { grid-template-columns: 1fr 1fr; }
 }
+
+/* ── CHI SIAMO — FIX PADDING ── */
+.chi-siamo {
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+}
+@media (max-width: 700px) {
+  .chi-siamo {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+}
+
+/* ── CHI SIAMO — STAT BOXES RIDOTTE ── */
+.chi-siamo-inner > .reveal {
+  gap: 10px !important;
+}
+.chi-siamo-inner > .reveal > div {
+  padding: 14px 16px !important;
+  border-radius: 10px !important;
+}
+.chi-siamo-inner > .reveal > div > div:first-child {
+  font-size: 1.2rem !important;
+  font-weight: 600;
+}
+.chi-siamo-inner > .reveal > div > div:last-child {
+  font-size: .75rem !important;
+  margin-top: 3px !important;
+}
