@@ -29,8 +29,8 @@
     .esp-card h3 { font-family: var(--serif); font-size: 1.15rem; font-weight: 500; color: var(--brown); line-height: 1.1; margin-bottom: 6px; letter-spacing: -.02em; }
     .esp-card p { font-size: .78rem; color: var(--text-l); line-height: 1.5; margin-bottom: 10px; flex: 1; }
     .esp-free { display: inline-flex; align-items: center; width: fit-content; margin-bottom: 10px; padding: 4px 10px; border-radius: 999px; background: rgba(196,98,45,.08); color: var(--t-d); font-size: .60rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; }
-    .esp-download { display: flex; align-items: center; justify-content: center; gap: 7px; padding: 11px 16px; border-radius: 8px; background: transparent; border: 1.5px solid var(--t); color: var(--t); font-size: .74rem; font-weight: 600; letter-spacing: .02em; transition: background .2s ease, color .2s ease, transform .15s ease; margin-top: auto; text-decoration: none; }
-    .esp-download:hover { background: var(--t); color: var(--white); transform: translateY(-1px); }
+    .esp-download { display: flex; align-items: center; justify-content: center; gap: 7px; padding: 10px 20px; border-radius: 999px; background: var(--t); border: none; color: #fff; font-size: .74rem; font-weight: 600; letter-spacing: .02em; transition: background .2s ease, transform .15s ease, box-shadow .2s ease; margin-top: auto; text-decoration: none; box-shadow: 0 3px 10px rgba(196,98,45,.25); }
+    .esp-download:hover { background: var(--t-d); transform: translateY(-1px); box-shadow: 0 5px 16px rgba(196,98,45,.35); }
     .esp-download svg { width: 13px; height: 13px; flex-shrink: 0; }
     .esp-download-disabled { background: rgba(122,92,62,.45); cursor: not-allowed; }
     .esp-download-disabled:hover { background: rgba(122,92,62,.45); transform: none; }
@@ -170,8 +170,8 @@
                 <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
               </div>
               <div>
-                <strong>Ascolto della tua famiglia</strong><br>
-                <span style="font-size:.82rem;color:var(--text-l)">Ti chiedo chi siete, quanti bambini avete, che età hanno, quando vorreste partire e cosa vi piace fare in vacanza.</span>
+                <strong>Ascolto delle esigenze della famiglia</strong><br>
+                <span style="font-size:.82rem;color:var(--text-l)">Preferenze, eta dei bambini, periodo desiderato e aspettative di viaggio.</span>
               </div>
             </li>
             <li class="reveal">
@@ -179,8 +179,8 @@
                 <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
               </div>
               <div>
-                <strong>Dove stare in Sicilia - e dove no.</strong><br>
-                <span style="font-size:.82rem;color:var(--text-l)">Non tutte le zone funzionano per tutte le famiglie. Ti dico quale area si adatta di più a quello che cercate.</span>
+                <strong>Orientamento sulle zone della Sicilia</strong><br>
+                <span style="font-size:.82rem;color:var(--text-l)">Quali aree possono essere piu compatibili con le vostre aspettative.</span>
               </div>
             </li>
             <li class="reveal">
@@ -188,8 +188,8 @@
                 <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
               </div>
               <div>
-                <strong>Le strutture che contano davvero</strong><br>
-                <span style="font-size:.82rem;color:var(--text-l)">Ti spiego le differenze tra le tipologie di soggiorno in modo semplice, senza gergo da catalogo.</span>
+                <strong>Supporto nella lettura delle opzioni disponibili</strong><br>
+                <span style="font-size:.82rem;color:var(--text-l)">Differenze tra tipologie di soggiorno spiegate in modo semplice.</span>
               </div>
             </li>
             <li class="reveal">
@@ -197,8 +197,8 @@
                 <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
               </div>
               <div>
-                <strong>Cosa scegliere in base ai vostri bambini</strong><br>
-                <span style="font-size:.82rem;color:var(--text-l)">L'età dei bambini cambia tutto. Ti aiuto a capire cosa ha senso per la vostra famiglia in questo momento..</span>
+                <strong>Aiuto nel capire le strutture piu adatte</strong><br>
+                <span style="font-size:.82rem;color:var(--text-l)">Caratteristiche utili in base alla composizione del gruppo familiare.</span>
               </div>
             </li>
             <li class="reveal">
@@ -206,8 +206,8 @@
                 <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.45 2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.97a16 16 0 0 0 6 6l1.27-.88a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
               </div>
               <div>
-                <strong>Il passo successivo, se vuoi farlo</strong><br>
-                <span style="font-size:.82rem;color:var(--text-l)">Se decidi di procedere, ti metto in contatto con il tour operator giusto per la destinazione che hai scelto. Senza impegno.</span>
+                <strong>Collegamento con il tour operator per eventuale formalizzazione</strong><br>
+                <span style="font-size:.82rem;color:var(--text-l)">Ti mettiamo in contatto con il tour operator piu adatto per la destinazione scelta.</span>
               </div>
             </li>
           </ul>
@@ -233,8 +233,7 @@
             <p>Spiaggia comoda, borgo a piedi, ritmo giusto per i bambini piccoli. La guida ti dice quando andare e dove stare.</p>
             <span class="esp-free">PDF Gratis</span>
             <a class="esp-download" href="https://wa.me/+393205532756" target="_blank" rel="noopener noreferrer">
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-  La voglio
+  La voglio →
 </a>
           </div>
         </div>
@@ -246,8 +245,7 @@
             <p>Teatro antico, Isola Bella e orari che cambiano tutto con bambini al seguito. La guida ti evita le salite sbagliate.</p>
             <span class="esp-free">PDF Gratis</span>
             <a class="esp-download" href="https://wa.me/+393205532756" target="_blank" rel="noopener noreferrer">
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-  La voglio
+  La voglio →
 </a>
           </div>
         </div>
@@ -259,8 +257,7 @@
             <p>A che quota andare, cosa preparare, quanto regge un bambino di 5 anni. Il vulcano si fa benissimo in famiglia — se sai come.</p>
             <span class="esp-free">PDF Gratis</span>
             <a class="esp-download" href="https://wa.me/+393205532756" target="_blank" rel="noopener noreferrer">
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-  La voglio
+  La voglio →
 </a>
           </div>
         </div>
@@ -272,8 +269,7 @@
             <p>Quali isole scegliere, traghetti, logistica: tutto quello che nessuno dice quando ci si va con bambini piccoli.</p>
             <span class="esp-free">PDF Gratis</span>
             <a class="esp-download" href="https://wa.me/+393205532756" target="_blank" rel="noopener noreferrer">
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-  La voglio
+  La voglio →
 </a>
           </div>
         </div>
@@ -285,8 +281,7 @@
             <p>Il parco UNESCO non è solo per adulti. La guida ti mostra come viverlo in famiglia senza stancare i bambini.</p>
             <span class="esp-free">PDF Gratis</span>
             <a class="esp-download" href="https://wa.me/+393205532756" target="_blank" rel="noopener noreferrer">
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-  La voglio
+  La voglio →
 </a>
           </div>
         </div>
@@ -298,8 +293,7 @@
             <p>Calette, sentieri e acque incredibili. La guida per chi ci viene con bambini nel marsupio o in età da trekking.</p>
             <span class="esp-free">PDF Gratis</span>
             <a class="esp-download" href="https://wa.me/+393205532756" target="_blank" rel="noopener noreferrer">
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-  La voglio
+  La voglio →
 </a>
           </div>
         </div>
@@ -475,7 +469,7 @@
             <li><a href="#esperienze">Guide gratuite</a></li>
             <li><a href="#destinazioni">Destinazioni</a></li>
             <li><a href="#come-funziona">Come funziona</a></li>
-            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#faq">FAQ Trasparenza</a></li>
           </ul>
         </div>
         <div class="footer-col">
