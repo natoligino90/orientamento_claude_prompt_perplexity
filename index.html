@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="it">
 <head>
   <meta charset="UTF-8" />
@@ -39,30 +40,35 @@
     .esp-dot.active { background: var(--t); transform: scale(1.3); }
     .esp-note { margin-top: 20px; font-size: .74rem; color: var(--text-l); font-style: italic; padding: 0 20px; }
 
-    /* CHI SIAMO */
-    .chi-siamo { background: #FDFAF6; padding: 72px 0 64px; border-bottom: 1px solid rgba(196,98,45,.08); }
-    .chi-siamo-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; }
-    .chi-siamo-text p { font-size: .95rem; color: var(--text-l); line-height: 1.8; margin-bottom: 16px; }
-    .chi-siamo-text p:last-child { margin-bottom: 0; }
-    .chi-siamo-firma { margin-top: 28px; padding-top: 20px; border-top: 1px solid rgba(196,98,45,.12); font-size: .82rem; color: var(--text-l); }
-    .chi-siamo-firma strong { color: var(--brown); display: block; font-size: .9rem; margin-bottom: 3px; }
-    @media (max-width: 768px) { .chi-siamo-inner { grid-template-columns: 1fr; gap: 32px; } }
+```
+/* CHI SIAMO */
+.chi-siamo { background: #FDFAF6; padding: 72px 0 64px; border-bottom: 1px solid rgba(196,98,45,.08); }
+.chi-siamo-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; }
+.chi-siamo-text p { font-size: .95rem; color: var(--text-l); line-height: 1.8; margin-bottom: 16px; }
+.chi-siamo-text p:last-child { margin-bottom: 0; }
+.chi-siamo-firma { margin-top: 28px; padding-top: 20px; border-top: 1px solid rgba(196,98,45,.12); font-size: .82rem; color: var(--text-l); }
+.chi-siamo-firma strong { color: var(--brown); display: block; font-size: .9rem; margin-bottom: 3px; }
+@media (max-width: 768px) { .chi-siamo-inner { grid-template-columns: 1fr; gap: 32px; } }
 
-    /* DEST CTA overlay button */
-    .dest-wa-cta { display:inline-flex; align-items:center; gap:6px; margin-top:10px; padding:7px 14px; background:rgba(255,255,255,.15); border:1px solid rgba(255,255,255,.35); border-radius:20px; color:#fff; font-size:.74rem; font-weight:500; text-decoration:none; transition:background .2s; }
-    .dest-wa-cta:hover { background:rgba(255,255,255,.28); }
-    .dest-wa-cta svg { flex-shrink:0; }
+/* DEST CTA overlay button */
+.dest-wa-cta { display:inline-flex; align-items:center; gap:6px; margin-top:10px; padding:7px 14px; background:rgba(255,255,255,.15); border:1px solid rgba(255,255,255,.35); border-radius:20px; color:#fff; font-size:.74rem; font-weight:500; text-decoration:none; transition:background .2s; }
+.dest-wa-cta:hover { background:rgba(255,255,255,.28); }
+.dest-wa-cta svg { flex-shrink:0; }
+```
+
   </style>
 </head>
 <body>
 
   <!-- TOP BAR -->
+
   <div class="topbar" role="banner">
     <strong>Orientamento gratuito per famiglie.</strong>
     Formalizzazione e garanzie a cura del tour operator di riferimento per la destinazione scelta.
   </div>
 
   <!-- NAV -->
+
   <nav aria-label="Navigazione principale">
     <a href="#top" class="nav-logo" aria-label="Sicilia in Famiglia - torna in cima">
       <img src="assets/logo-sicilia-famiglia.png" alt="Sicilia in Famiglia" />
@@ -80,6 +86,7 @@
   </nav>
 
   <!-- HERO -->
+
   <section class="hero" id="top" aria-labelledby="hero-title">
     <div class="hero-bg" role="presentation" aria-hidden="true"></div>
     <div class="hero-inner">
@@ -105,6 +112,7 @@
 </section>
 
   <!-- CHI SIAMO -->
+
   <section class="chi-siamo" id="chi-siamo" aria-labelledby="chi-siamo-title">
     <div class="container">
       <span class="section-tag reveal">Chi siamo</span>
@@ -154,6 +162,7 @@
   </section>
 
   <!-- COSA FACCIAMO -->
+
   <section class="facciamo" id="cosa-facciamo" aria-labelledby="facciamo-title">
     <div class="container">
       <div class="facciamo-grid" style="grid-template-columns:1fr">
@@ -219,6 +228,7 @@
   </section>
 
   <!-- ESPERIENZE TESTATE -->
+
   <section class="esperienze" id="esperienze" aria-labelledby="esp-title">
     <div class="container" style="padding-bottom:16px; padding-left:20px; padding-right:20px;">
       <span class="section-tag reveal">Esperienze testate</span>
@@ -234,7 +244,7 @@
             <h3>Cefalù</h3>
             <p>Spiaggia comoda, borgo a piedi, ritmo giusto per i bambini piccoli. La guida ti dice quando andare e dove stare.</p>
             <span class="esp-free">PDF Gratis</span>
-            <a class="esp-download" href="https://wa.me/+393205532756" target="_blank" rel="noopener noreferrer">
+            <a class="esp-download" href="https://wa.me/+393205532756?text=Ciao%21%20Vorrei%20ricevere%20la%20guida%20gratuita%20su%20Cefal%C3%B9%20%F0%9F%98%8A" target="_blank" rel="noopener noreferrer">
   La voglio →
 </a>
           </div>
@@ -246,7 +256,7 @@
             <h3>Taormina</h3>
             <p>Teatro antico, Isola Bella e orari che cambiano tutto con bambini al seguito. La guida ti evita le salite sbagliate.</p>
             <span class="esp-free">PDF Gratis</span>
-            <a class="esp-download" href="https://wa.me/+393205532756" target="_blank" rel="noopener noreferrer">
+            <a class="esp-download" href="https://wa.me/+393205532756?text=Ciao%21%20Vorrei%20ricevere%20la%20guida%20gratuita%20su%20Taormina%20%F0%9F%98%8A" target="_blank" rel="noopener noreferrer">
   La voglio →
 </a>
           </div>
@@ -258,7 +268,7 @@
             <h3>Etna</h3>
             <p>A che quota andare, cosa preparare, quanto regge un bambino di 5 anni. Il vulcano si fa benissimo in famiglia — se sai come.</p>
             <span class="esp-free">PDF Gratis</span>
-            <a class="esp-download" href="https://wa.me/+393205532756" target="_blank" rel="noopener noreferrer">
+            <a class="esp-download" href="https://wa.me/+393205532756?text=Ciao%21%20Vorrei%20ricevere%20la%20guida%20gratuita%20sull%27Etna%20%F0%9F%98%8A" target="_blank" rel="noopener noreferrer">
   La voglio →
 </a>
           </div>
@@ -270,7 +280,7 @@
             <h3>Isole Eolie</h3>
             <p>Quali isole scegliere, traghetti, logistica: tutto quello che nessuno dice quando ci si va con bambini piccoli.</p>
             <span class="esp-free">PDF Gratis</span>
-            <a class="esp-download" href="https://wa.me/+393205532756" target="_blank" rel="noopener noreferrer">
+            <a class="esp-download" href="https://wa.me/+393205532756?text=Ciao%21%20Vorrei%20ricevere%20la%20guida%20gratuita%20sulle%20Isole%20Eolie%20%F0%9F%98%8A" target="_blank" rel="noopener noreferrer">
   La voglio →
 </a>
           </div>
@@ -282,7 +292,7 @@
             <h3>Valle dei Templi</h3>
             <p>Il parco UNESCO non è solo per adulti. La guida ti mostra come viverlo in famiglia senza stancare i bambini.</p>
             <span class="esp-free">PDF Gratis</span>
-            <a class="esp-download" href="https://wa.me/+393205532756" target="_blank" rel="noopener noreferrer">
+            <a class="esp-download" href="https://wa.me/+393205532756?text=Ciao%21%20Vorrei%20ricevere%20la%20guida%20gratuita%20sulla%20Valle%20dei%20Templi%20%F0%9F%98%8A" target="_blank" rel="noopener noreferrer">
   La voglio →
 </a>
           </div>
@@ -294,7 +304,7 @@
             <h3>Riserva Zingaro</h3>
             <p>Calette, sentieri e acque incredibili. La guida per chi ci viene con bambini nel marsupio o in età da trekking.</p>
             <span class="esp-free">PDF Gratis</span>
-            <a class="esp-download" href="https://wa.me/+393205532756" target="_blank" rel="noopener noreferrer">
+            <a class="esp-download" href="https://wa.me/+393205532756?text=Ciao%21%20Vorrei%20ricevere%20la%20guida%20gratuita%20sulla%20Riserva%20dello%20Zingaro%20%F0%9F%98%8A" target="_blank" rel="noopener noreferrer">
   La voglio →
 </a>
           </div>
@@ -315,6 +325,7 @@
   </section>
 
   <!-- DESTINAZIONI -->
+
   <section class="destinazioni" id="destinazioni" aria-labelledby="dest-title">
     <div class="container">
       <span class="section-tag reveal">Scopri la Sicilia</span>
@@ -344,6 +355,7 @@
   </section>
 
   <!-- COME FUNZIONA -->
+
   <section class="funziona" id="come-funziona" aria-labelledby="funziona-title">
     <div class="container">
       <span class="section-tag reveal">Come funziona</span>
@@ -373,6 +385,7 @@
   </section>
 
   <!-- INTERMEZZO -->
+
   <section class="intermezzo" aria-label="Invito al contatto">
     <div class="intermezzo-bg" role="presentation" aria-hidden="true"></div>
     <div class="intermezzo-inner">
@@ -387,6 +400,7 @@
   </section>
 
   <!-- FAQ -->
+
   <section class="faq" id="faq" aria-labelledby="faq-title">
     <div class="container">
       <span class="section-tag reveal">Domande frequenti</span>
@@ -394,46 +408,50 @@
       <p class="section-lead reveal" style="margin-bottom:0">Quello che le famiglie ci chiedono più spesso — sulla Sicilia e su come funzioniamo.</p>
       <div class="faq-list reveal" role="list">
 
-        <div class="faq-item" role="listitem">
-          <button class="faq-q" aria-expanded="false" aria-controls="faq-a1" id="faq-q1">Agosto è troppo caldo per portare i bambini in Sicilia?<svg class="chevron" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button>
-          <div class="faq-a" id="faq-a1" role="region" aria-labelledby="faq-q1">Dipende da come lo si organizza. Agosto è il mese più caldo ma anche il più frequentato — non è impossibile, ma richiede accortezza. Le spiagge vanno vissute la mattina presto e nel tardo pomeriggio. I centri storici si visitano bene dalle 9 alle 11:30, poi si pausa. Con bambini piccoli sotto i 3 anni, giugno e settembre sono molto più comodi. Per famiglie con bambini più grandi, agosto funziona se si pianifica bene.</div>
-        </div>
-
-        <div class="faq-item" role="listitem">
-          <button class="faq-q" aria-expanded="false" aria-controls="faq-a2" id="faq-q2">Meglio il nord o il sud della Sicilia per una famiglia con bambini piccoli?<svg class="chevron" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button>
-          <div class="faq-a" id="faq-a2" role="region" aria-labelledby="faq-q2">Non esiste una risposta unica — dipende da cosa cercate. Il nord (Cefalù, San Vito Lo Capo) ha spiagge più comode, borghi a misura di passeggino, ritmi più rilassati. Il sud-est (Ragusa, Modica, Siracusa) offre paesaggi barocchi incredibili ma con più salite e superfici sconnesse. Il sud-ovest (Agrigento, Valle dei Templi) è potente culturalmente. Scrivici e ti aiutiamo a capire quale zona fa per la composizione della vostra famiglia.</div>
-        </div>
-
-        <div class="faq-item" role="listitem">
-          <button class="faq-q" aria-expanded="false" aria-controls="faq-a3" id="faq-q3">Le Isole Eolie sono adatte a bambini molto piccoli?<svg class="chevron" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button>
-          <div class="faq-a" id="faq-a3" role="region" aria-labelledby="faq-q3">Con bambini sotto i 4 anni le Eolie possono diventare logisticamente impegnative: traghetti, scale, salite, pochissimi passeggini. Lipari è la più attrezzata. Salina è più tranquilla ma richiede spostamenti in auto. Stromboli e Vulcano sono meno adatte ai piccoli. Con bambini dai 5-6 anni in su l'esperienza è bellissima. Per bambini più piccoli, Cefalù o San Vito Lo Capo garantiscono più serenità.</div>
-        </div>
-
-        <div class="faq-item" role="listitem">
-          <button class="faq-q" aria-expanded="false" aria-controls="faq-a4" id="faq-q4">Cefalù o San Vito Lo Capo: quale scegliere per una settimana in famiglia?<svg class="chevron" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button>
-          <div class="faq-a" id="faq-a4" role="region" aria-labelledby="faq-q4">Sono due esperienze diverse. Cefalù ha un borgo medievale vivo, una spiaggia comoda nel centro del paese, servizi a portata di mano — è più adatta a chi vuole alternare mare e cultura. San Vito Lo Capo ha una delle spiagge più belle d'Italia, un paese tranquillo, meno da "visitare" ma più da vivere. Con bambini piccoli entrambe funzionano bene — dipende se volete più relax o più vivacità. Scrivici e vi aiutiamo a scegliere.</div>
-        </div>
-
-        <div class="faq-item" role="listitem">
-          <button class="faq-q" aria-expanded="false" aria-controls="faq-a5" id="faq-q5">Il servizio ha un costo?<svg class="chevron" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button>
-          <div class="faq-a" id="faq-a5" role="region" aria-labelledby="faq-q5"><strong>Il servizio di orientamento è completamente gratuito.</strong> Non sono previsti costi, commissioni o compensi di alcun tipo da parte vostra. Se deciderete di procedere con una prenotazione, il rapporto contrattuale ed economico sarà esclusivamente con il tour operator di riferimento.</div>
-        </div>
-
-        <div class="faq-item" role="listitem">
-          <button class="faq-q" aria-expanded="false" aria-controls="faq-a6" id="faq-q6">Sicilia in Famiglia è un'agenzia di viaggi?<svg class="chevron" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button>
-          <div class="faq-a" id="faq-a6" role="region" aria-labelledby="faq-q6">No. <strong>Sicilia in Famiglia non è un'agenzia di viaggi né un tour operator.</strong> Offriamo esclusivamente un servizio gratuito di orientamento informativo. Se decidete di procedere, vi mettiamo in contatto con il tour operator di riferimento, che gestirà prenotazione, contratto, pagamento e garanzie.</div>
-        </div>
-
-        <div class="faq-item" role="listitem">
-          <button class="faq-q" aria-expanded="false" aria-controls="faq-a7" id="faq-q7">Chi gestisce la prenotazione e i pagamenti?<svg class="chevron" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button>
-          <div class="faq-a" id="faq-a7" role="region" aria-labelledby="faq-q7">Prenotazione, contratto, pagamento e garanzie sono gestiti <strong>esclusivamente dal tour operator di riferimento per la destinazione scelta</strong>. Sicilia in Famiglia non incassa somme e non emette conferme di prenotazione. Il rapporto contrattuale è direttamente tra voi e il tour operator.</div>
-        </div>
-
-      </div>
+```
+    <div class="faq-item" role="listitem">
+      <button class="faq-q" aria-expanded="false" aria-controls="faq-a1" id="faq-q1">Agosto è troppo caldo per portare i bambini in Sicilia?<svg class="chevron" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button>
+      <div class="faq-a" id="faq-a1" role="region" aria-labelledby="faq-q1">Dipende da come lo si organizza. Agosto è il mese più caldo ma anche il più frequentato — non è impossibile, ma richiede accortezza. Le spiagge vanno vissute la mattina presto e nel tardo pomeriggio. I centri storici si visitano bene dalle 9 alle 11:30, poi si pausa. Con bambini piccoli sotto i 3 anni, giugno e settembre sono molto più comodi. Per famiglie con bambini più grandi, agosto funziona se si pianifica bene.</div>
     </div>
+
+    <div class="faq-item" role="listitem">
+      <button class="faq-q" aria-expanded="false" aria-controls="faq-a2" id="faq-q2">Meglio il nord o il sud della Sicilia per una famiglia con bambini piccoli?<svg class="chevron" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button>
+      <div class="faq-a" id="faq-a2" role="region" aria-labelledby="faq-q2">Non esiste una risposta unica — dipende da cosa cercate. Il nord (Cefalù, San Vito Lo Capo) ha spiagge più comode, borghi a misura di passeggino, ritmi più rilassati. Il sud-est (Ragusa, Modica, Siracusa) offre paesaggi barocchi incredibili ma con più salite e superfici sconnesse. Il sud-ovest (Agrigento, Valle dei Templi) è potente culturalmente. Scrivici e ti aiutiamo a capire quale zona fa per la composizione della vostra famiglia.</div>
+    </div>
+
+    <div class="faq-item" role="listitem">
+      <button class="faq-q" aria-expanded="false" aria-controls="faq-a3" id="faq-q3">Le Isole Eolie sono adatte a bambini molto piccoli?<svg class="chevron" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button>
+      <div class="faq-a" id="faq-a3" role="region" aria-labelledby="faq-q3">Con bambini sotto i 4 anni le Eolie possono diventare logisticamente impegnative: traghetti, scale, salite, pochissimi passeggini. Lipari è la più attrezzata. Salina è più tranquilla ma richiede spostamenti in auto. Stromboli e Vulcano sono meno adatte ai piccoli. Con bambini dai 5-6 anni in su l'esperienza è bellissima. Per bambini più piccoli, Cefalù o San Vito Lo Capo garantiscono più serenità.</div>
+    </div>
+
+    <div class="faq-item" role="listitem">
+      <button class="faq-q" aria-expanded="false" aria-controls="faq-a4" id="faq-q4">Cefalù o San Vito Lo Capo: quale scegliere per una settimana in famiglia?<svg class="chevron" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button>
+      <div class="faq-a" id="faq-a4" role="region" aria-labelledby="faq-q4">Sono due esperienze diverse. Cefalù ha un borgo medievale vivo, una spiaggia comoda nel centro del paese, servizi a portata di mano — è più adatta a chi vuole alternare mare e cultura. San Vito Lo Capo ha una delle spiagge più belle d'Italia, un paese tranquillo, meno da "visitare" ma più da vivere. Con bambini piccoli entrambe funzionano bene — dipende se volete più relax o più vivacità. Scrivici e vi aiutiamo a scegliere.</div>
+    </div>
+
+    <div class="faq-item" role="listitem">
+      <button class="faq-q" aria-expanded="false" aria-controls="faq-a5" id="faq-q5">Il servizio ha un costo?<svg class="chevron" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button>
+      <div class="faq-a" id="faq-a5" role="region" aria-labelledby="faq-q5"><strong>Il servizio di orientamento è completamente gratuito.</strong> Non sono previsti costi, commissioni o compensi di alcun tipo da parte vostra. Se deciderete di procedere con una prenotazione, il rapporto contrattuale ed economico sarà esclusivamente con il tour operator di riferimento.</div>
+    </div>
+
+    <div class="faq-item" role="listitem">
+      <button class="faq-q" aria-expanded="false" aria-controls="faq-a6" id="faq-q6">Sicilia in Famiglia è un'agenzia di viaggi?<svg class="chevron" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button>
+      <div class="faq-a" id="faq-a6" role="region" aria-labelledby="faq-q6">No. <strong>Sicilia in Famiglia non è un'agenzia di viaggi né un tour operator.</strong> Offriamo esclusivamente un servizio gratuito di orientamento informativo. Se decidete di procedere, vi mettiamo in contatto con il tour operator di riferimento, che gestirà prenotazione, contratto, pagamento e garanzie.</div>
+    </div>
+
+    <div class="faq-item" role="listitem">
+      <button class="faq-q" aria-expanded="false" aria-controls="faq-a7" id="faq-q7">Chi gestisce la prenotazione e i pagamenti?<svg class="chevron" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button>
+      <div class="faq-a" id="faq-a7" role="region" aria-labelledby="faq-q7">Prenotazione, contratto, pagamento e garanzie sono gestiti <strong>esclusivamente dal tour operator di riferimento per la destinazione scelta</strong>. Sicilia in Famiglia non incassa somme e non emette conferme di prenotazione. Il rapporto contrattuale è direttamente tra voi e il tour operator.</div>
+    </div>
+
+  </div>
+</div>
+```
+
   </section>
 
   <!-- CTA FINALE -->
+
   <section class="cta-section" aria-labelledby="cta-title">
     <div class="container">
       <span class="section-tag reveal">Inizia da qui</span>
@@ -448,6 +466,7 @@
   </section>
 
   <!-- FOOTER -->
+
   <footer role="contentinfo">
     <div class="footer-inner">
       <div class="footer-top">
@@ -506,6 +525,7 @@
   </footer>
 
   <!-- SCRIPT -->
+
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
 
