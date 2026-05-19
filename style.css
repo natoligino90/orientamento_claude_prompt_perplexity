@@ -549,44 +549,47 @@ footer { background: var(--brown); color: rgba(255,255,255,.55); padding: 20px 2
 /* ── RECENSIONE IN EVIDENZA ── */
 .rec-spotlight {
   background: linear-gradient(135deg, #1B4F8A 0%, #13386A 100%);
-  padding: 64px 20px;
+  padding: 52px 20px;
 }
 .rec-spotlight-inner {
-  max-width: 680px;
+  max-width: 600px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  gap: 24px;
+  gap: 16px;
 }
 .rec-spotlight-quote {
-  font-size: 4rem;
+  font-size: 2.8rem;
   line-height: 1;
-  color: rgba(255,255,255,.25);
+  color: rgba(255,255,255,.2);
   font-family: Georgia, serif;
-  margin-bottom: -16px;
+  margin-bottom: -8px;
 }
 .rec-spotlight-inner blockquote {
   margin: 0;
 }
 .rec-spotlight-inner blockquote p {
-  font-size: 1.08rem;
+  font-size: .98rem;
   line-height: 1.75;
   color: rgba(255,255,255,.92);
   font-style: italic;
-  margin: 0 0 16px;
+  margin: 0 0 12px;
 }
 .rec-spotlight-inner blockquote footer {
   display: flex;
   flex-direction: column;
   gap: 3px;
+  background: transparent;
+  padding: 0;
+  border: none;
 }
 .rec-spotlight-inner blockquote footer strong {
   color: #fff;
-  font-size: .88rem;
+  font-size: .85rem;
 }
 .rec-spotlight-inner blockquote footer span {
-  color: rgba(255,255,255,.55);
-  font-size: .78rem;
+  color: rgba(255,255,255,.5);
+  font-size: .75rem;
 }
