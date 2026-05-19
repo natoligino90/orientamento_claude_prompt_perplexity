@@ -821,8 +821,8 @@ footer { background: var(--brown); color: rgba(255,255,255,.55); padding: 20px 2
   flex: 0 0 4px;
 }
 .rec-scroll {
-  padding-left: 20px !important;
-  padding-right: 20px !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }
 .rec-scroll::after {
   content: '';
