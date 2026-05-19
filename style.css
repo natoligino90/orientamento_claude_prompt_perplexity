@@ -853,3 +853,27 @@ footer { background: var(--brown); color: rgba(255,255,255,.55); padding: 20px 2
     rgba(10,5,0,.10) 100%
   ) !important;
 }
+
+/* ── RECENSIONI DARK ── */
+.rec-section--dark {
+  background: #1E130A;
+  border-top: none;
+}
+.rec-section--dark .container {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.rec-card--dark {
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.1);
+}
+.rec-card--dark p {
+  color: rgba(255,255,255,.88);
+}
+.rec-card--dark footer {
+  color: rgba(255,255,255,.45);
+  border-top: 1px solid rgba(255,255,255,.1);
+}
+.rec-card--dark footer strong {
+  color: rgba(255,255,255,.85);
+}

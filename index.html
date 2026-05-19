@@ -287,29 +287,29 @@
 
   <!-- RECENSIONI -->
 
-  <section class="rec-section" aria-labelledby="rec-title2">
+  <section class="rec-section rec-section--dark" aria-labelledby="rec-title2">
     <div class="container">
-      <span class="section-tag reveal">Chi ci ha già scritto</span>
-      <h2 class="section-title reveal" id="rec-title2">Quello che le famiglie ci <em>dicono</em></h2>
+      <span class="section-tag reveal" style="color:rgba(255,255,255,.5)">Chi ci ha già scritto</span>
+      <h2 class="section-title reveal" id="rec-title2" style="color:#fff">Quello che le famiglie ci <em>dicono</em></h2>
     </div>
     <div class="rec-scroll">
-      <blockquote class="rec-card reveal">
+      <blockquote class="rec-card rec-card--dark reveal">
         <p>"La guida è abbastanza esaustiva. Grazie!"</p>
         <footer><strong>Utente Facebook</strong> · Guida Cefalù</footer>
       </blockquote>
-      <blockquote class="rec-card reveal">
+      <blockquote class="rec-card rec-card--dark reveal">
         <p>"Non pensavo ci fosse qualcuno disposto ad aiutarti gratis. Ci ha aiutato a scegliere la zona giusta per i nostri bambini."</p>
         <footer><strong>Famiglia da Milano</strong> · Orientamento + guida Etna</footer>
       </blockquote>
-      <blockquote class="rec-card reveal">
+      <blockquote class="rec-card rec-card--dark reveal">
         <p>"Avevo mille dubbi sulle Eolie con un bimbo di 2 anni. Gino mi ha spiegato quali isole evitare — cose che non trovi online."</p>
         <footer><strong>Mamma da Roma</strong> · Isole Eolie</footer>
       </blockquote>
-      <blockquote class="rec-card reveal">
+      <blockquote class="rec-card rec-card--dark reveal">
         <p>"Risposta rapida, precisa, senza cercare di vendermi nulla. Un servizio raro."</p>
         <footer><strong>Papà da Torino</strong> · Orientamento Taormina</footer>
       </blockquote>
-      <blockquote class="rec-card reveal">
+      <blockquote class="rec-card rec-card--dark reveal">
         <p>"Finalmente qualcuno che ti dice la verità su dove andare con i bambini piccoli. Consigli pratici veri."</p>
         <footer><strong>Famiglia da Napoli</strong> · San Vito Lo Capo</footer>
       </blockquote>
@@ -324,7 +324,10 @@
       <h2 class="section-title reveal" id="dest-title">Zone che vale la pena conoscere</h2>
       <div class="divider reveal" aria-hidden="true"></div>
       <p class="section-lead reveal">Un assaggio editoriale delle aree che le famiglie trovano piu interessanti. Scrivici per capire quale fa per voi.</p>
-      <div class="dest-scroll">
+      <div style="position:relative">
+        <button id="destPrev" aria-label="Precedente" style="display:none;position:absolute;left:-16px;top:50%;transform:translateY(-50%);z-index:10;width:40px;height:40px;border-radius:50%;background:#fff;border:1px solid rgba(196,98,45,.2);box-shadow:0 2px 12px rgba(0,0,0,.12);cursor:pointer;align-items:center;justify-content:center;color:#1E130A"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg></button>
+        <button id="destNext" aria-label="Successiva" style="display:none;position:absolute;right:-16px;top:50%;transform:translateY(-50%);z-index:10;width:40px;height:40px;border-radius:50%;background:#fff;border:1px solid rgba(196,98,45,.2);box-shadow:0 2px 12px rgba(0,0,0,.12);cursor:pointer;align-items:center;justify-content:center;color:#1E130A"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></button>
+        <div class="dest-scroll" id="destCarousel">
         <article class="dest-card-v2 reveal">
           <img src="images/agrigento.jpg" alt="Valle dei Templi" loading="lazy" />
           <div class="dest-v2-body">
@@ -445,6 +448,7 @@
             </a>
           </div>
         </article>
+      </div>
       </div>
       <p class="dest-note reveal">Destinazioni presentate a titolo puramente informativo e ispirazionale. Nessun prezzo o disponibilita e indicato.</p>
       <div style="text-align:center">
@@ -573,37 +577,6 @@
         <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M20.52 3.48A11.93 11.93 0 0 0 12 0C5.37 0 0 5.37 0 12c0 2.11.55 4.16 1.6 5.97L0 24l6.22-1.63A11.94 11.94 0 0 0 12 24c6.63 0 12-5.37 12-12 0-3.2-1.25-6.21-3.48-8.52zM12 22c-1.85 0-3.65-.5-5.22-1.44l-.37-.22-3.86 1.01 1.03-3.74-.24-.38A9.94 9.94 0 0 1 2 12C2 6.48 6.48 2 12 2c2.67 0 5.18 1.04 7.07 2.93A9.93 9.93 0 0 1 22 12c0 5.52-4.48 10-10 10zm5.44-7.6c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15s-.77.96-.94 1.16c-.17.2-.35.22-.65.07A8.22 8.22 0 0 1 9.6 13.1c-.42-.72-.7-1.52-.78-2.35-.08-.82.18-1.6.72-2.19.19-.2.38-.39.6-.54.22-.15.3-.09.44.06.14.15.6.73.73.88.13.15.13.28 0 .43-.13.15-.3.35-.43.53-.13.18-.1.37.02.54.43.59.96 1.1 1.57 1.51.61.41 1.28.7 1.98.87.2.05.37.02.5-.1.13-.12.57-.66.72-.88.15-.22.3-.18.5-.11.2.07 1.72.81 2.02.96.3.15.5.22.57.35.07.13.07.76-.22 1.06z"/></svg>
         Scrivici senza impegno
       </a>
-    </div>
-  </section>
-
-  <!-- RECENSIONI -->
-
-  <section class="rec-section" aria-labelledby="rec-title">
-    <div class="container">
-      <span class="section-tag reveal">Chi ci ha già scritto</span>
-      <h2 class="section-title reveal" id="rec-title">Quello che le famiglie ci <em>dicono</em></h2>
-    </div>
-    <div class="rec-scroll">
-      <blockquote class="rec-card reveal">
-        <p>"La guida è abbastanza esaustiva. Grazie!"</p>
-        <footer><strong>Utente Facebook</strong> · Guida Cefalù</footer>
-      </blockquote>
-      <blockquote class="rec-card reveal">
-        <p>"Non pensavo ci fosse qualcuno disposto ad aiutarti gratis. Ci ha aiutato a scegliere la zona giusta per i nostri bambini."</p>
-        <footer><strong>Famiglia da Milano</strong> · Orientamento + guida Etna</footer>
-      </blockquote>
-      <blockquote class="rec-card reveal">
-        <p>"Avevo mille dubbi sulle Eolie con un bimbo di 2 anni. Gino mi ha spiegato quali isole evitare — cose che non trovi online."</p>
-        <footer><strong>Mamma da Roma</strong> · Isole Eolie</footer>
-      </blockquote>
-      <blockquote class="rec-card reveal">
-        <p>"Risposta rapida, precisa, senza cercare di vendermi nulla. Un servizio raro."</p>
-        <footer><strong>Papà da Torino</strong> · Orientamento Taormina</footer>
-      </blockquote>
-      <blockquote class="rec-card reveal">
-        <p>"Finalmente qualcuno che ti dice la verità su dove andare con i bambini piccoli. Consigli pratici veri."</p>
-        <footer><strong>Famiglia da Napoli</strong> · San Vito Lo Capo</footer>
-      </blockquote>
     </div>
   </section>
 
@@ -809,7 +782,30 @@
       });
     })();
 
-    // Frecce carosello desktop
+    // Frecce destinazioni desktop
+    (function() {
+      var dc = document.getElementById('destCarousel');
+      var dp = document.getElementById('destPrev');
+      var dn = document.getElementById('destNext');
+      if (!dc || !dp || !dn) return;
+      function showArrows() {
+        if (window.innerWidth >= 700) {
+          dp.style.display = 'flex';
+          dn.style.display = 'flex';
+        } else {
+          dp.style.display = 'none';
+          dn.style.display = 'none';
+        }
+      }
+      showArrows();
+      window.addEventListener('resize', showArrows);
+      var cw = function() {
+        var c = dc.querySelector('.dest-card-v2');
+        return c ? c.offsetWidth + 16 : 316;
+      };
+      dp.addEventListener('click', function() { dc.scrollBy({ left: -cw(), behavior: 'smooth' }); });
+      dn.addEventListener('click', function() { dc.scrollBy({ left: cw(), behavior: 'smooth' }); });
+    })();
     (function() {
       const carousel = document.getElementById('espCarousel');
       const prevBtn  = document.getElementById('espPrev');
