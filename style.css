@@ -491,7 +491,7 @@ footer { background: var(--brown); color: rgba(255,255,255,.55); padding: 20px 2
   background: rgba(255,255,255,.12);
   border-color: #fff;
 }
-.btn-guide-hero svg { flex-shrink: 0; }
+.btn-guide-hero svg { flex-shrink: 0; width: 16px; height: 16px; }
 .hero-social-proof {
   display: flex;
   align-items: center;
