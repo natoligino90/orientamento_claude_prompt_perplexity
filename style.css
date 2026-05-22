@@ -877,3 +877,45 @@ footer { background: var(--brown); color: rgba(255,255,255,.55); padding: 20px 2
 .rec-card--dark footer strong {
   color: rgba(255,255,255,.85);
 }
+
+/* ── HERO EMAIL ALT ── */
+.hero-email-alt {
+  margin-top: 12px;
+  font-size: .78rem;
+  color: rgba(255,255,255,.60);
+}
+.hero-email-alt a {
+  color: #F0C898;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.hero-email-alt a:hover { color: #fff; }
+
+/* ── BTN MAIL CTA ── */
+.btn-mail-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 28px;
+  border-radius: 50px;
+  font-size: .96rem;
+  font-weight: 500;
+  background: transparent;
+  border: 2px solid rgba(196,98,45,.4);
+  color: var(--t-d);
+  transition: border-color .2s, background .2s;
+  white-space: nowrap;
+}
+.btn-mail-cta:hover {
+  border-color: var(--t);
+  background: rgba(196,98,45,.06);
+}
+
+/* ── REC NOTE ── */
+.rec-note {
+  font-size: .72rem;
+  color: rgba(255,255,255,.38);
+  font-style: italic;
+  padding: 0 20px;
+  margin-top: 12px;
+}
